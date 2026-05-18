@@ -2,7 +2,8 @@
 
 I'm a recent Computer Science graduate from Clemson University with a minor in Cybersecurity, driven by a passion for defending enterprise environments and responding to real-world threats. This repository serves as a living portfolio of my hands-on SOC Analyst labs, documenting the skills, tools, and techniques I build as I transition into a full-time Security Operations role.
 
----
+---<img width="813" height="366" alt="image" src="https://github.com/user-attachments/assets/da5d2265-34ec-4c7b-80b9-5a1c5f90d985" />
+
 
 ## Objective
 
