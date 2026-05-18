@@ -1,4 +1,4 @@
-# Hi, I'm Johan Zapata 👋
+# Hi, I'm Johan Zapata 
 
 I'm a recent Computer Science graduate from Clemson University with a minor in Cybersecurity, driven by a passion for defending enterprise environments and responding to real-world threats. This repository serves as a living portfolio of my hands-on SOC Analyst labs, documenting the skills, tools, and techniques I build as I transition into a full-time Security Operations role.
 
