@@ -13,6 +13,7 @@ To develop and demonstrate practical, job-ready skills as a SOC Analyst through 
 
 | Skill | Associated Project |
 |---|---|
+| Home Lab Setup | [In Progress](#) |
 | SIEM Log Ingestion & Alerting | [Lab Coming Soon](#) |
 | Network Traffic Analysis | [Lab Coming Soon](#) |
 | Intrusion Detection & Prevention | [Lab Coming Soon](#) |
