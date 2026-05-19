@@ -9,10 +9,10 @@ The completed environemtn will simulate the kind of network an analyst would mon
 
 ### Progress Tracker
  
-| Component | Status |
+| Component | Status | 
 |---|---|
-| Install & Configure pfSense | Complete |
-| Install Windows 11 VM | Not Started |
+| [Install & Configure pfSense](#pfSense) | Complete |
+| Install Windows 11 VM | In Progress |
 | Download & Configure Kali Linux VM | Not Started |
 | Install Windows Server | Not Started |
 | Install & Configure Active Directory | Not Started |
@@ -24,7 +24,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 ## Lab Network Diagram
 <img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig 1 - Network Topology]
 
-# **Installing & Configuring pfSense**
+# **Installing & Configuring pfSense** 
+<a name="pfSense"></a>
 
 ### Overview
 pfsense acts as the firewall and router for the lab network, segmenting traffic between machines and simulating an enterprise boundary.
@@ -49,6 +50,14 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
  The WAN adapter (Fig 5) was configured as a Bridged Adapter connected to the host machine's Intel WI-FI 7 BE201 wireleess NIC. This introduced a ccommon VirtualBox limitation where bridged networking over a wireless adapter is inherently unreliable. Wi-Fi NICs operate at Layer 2 in a way that most home routers and wireless access points cannot or do not support. Home routers for example typically will not forward traffic destined for a MAC address that differs from the registered host machine. With out pfSense machine having its own unique MAC address, the router silently dropped/ignored the traffic. 
 
  To resolve the issue, we switched Adapter 1 (Fig 16) from Bridged Adapter to NAT, because NAT does not require selecting a specific host NIC. This allows pfSense to reach the internet without needing to interact with the home router directly, completly bypassing the Wi-Fi bridging limitation.
+### WAN & LAN Configuration
+The WAN interface (em0) received a DHCP lease of 10.0.2.15/24 from VirutalBox's NAT engine, confirming that the earlier adapter change from Bridge to NAT was successful. pfSense now has reliable outbound internet access routed through the host machine without depending on Wi-Fi bridging.
+
+The Lan interface was assigned 10.0.1.1/24, serving as the default gateway for the ECorp network segment. The /24 subnet provides 254 usable addresses (10.0.1.1 - 10.0.1.254), with pfSense holding .1 as the gateway. The remaining address space is deliberately left available to accomodate future static IP assignments for infrastructure such as domain controllers, file servers, SIEM nodes, or any additional lab machines that require a fixed, predictable address.
+
+OPT1 was assigned 10.0.3.1/24 as the gatewat for the Attack LAN segment following the same subnet logic - pfSense anchors the .1 address and the remaining range is available for the Kali Linux machine and any future attack infrastructure added to the lab.
+
+The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall management and further configuration.
 
  
 
