@@ -15,15 +15,6 @@ To develop and demonstrate practical, job-ready skills as a SOC Analyst through 
 |---|---|
 | Home Lab Setup | [In Progress](#) |
 | SIEM Log Ingestion & Alerting | [Lab Coming Soon](#) |
-| Network Traffic Analysis | [Lab Coming Soon](#) |
-| Intrusion Detection & Prevention | [Lab Coming Soon](#) |
-| Malware Analysis & Triage | [Lab Coming Soon](#) |
-| Incident Response & Documentation | [Lab Coming Soon](#) |
-| Threat Intelligence & IOC Identification | [Lab Coming Soon](#) |
-| Vulnerability Scanning & Assessment | [Lab Coming Soon](#) |
-| Digital Forensics & Evidence Collection | [Lab Coming Soon](#) |
-| Scripting for Security Automation | [Lab Coming Soon](#) |
-| Virtualization & Home Lab Setup | [Lab Coming Soon](#) |
 
 ---
 
