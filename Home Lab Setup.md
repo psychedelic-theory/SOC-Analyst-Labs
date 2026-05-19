@@ -89,4 +89,13 @@ The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall ma
 > <img width="727" height="410" alt="image" src="https://github.com/user-attachments/assets/b5cb8c52-5612-46e1-9534-097d6ea3a831" /> [Fig 20 - pfSense Final Configuration]
 
 # <a name="Win11"></a>Installing Windows 11 VM
-Hello
+
+### Overview
+Installation and configuration of a Windows 11 virtual machine to serve as a workstation endpoint in the Ecorp network segment.
+
+### Steps
+- [ ] Download Windows 11 ISO
+- [ ] Create Windows 11 VM in VirtualBox
+- [ ] Configure network adapter to LAN 0
+- [ ] Complete initial Windows setup
+- [ ] Join Domain
