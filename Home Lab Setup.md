@@ -69,7 +69,7 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 > <img width="710" height="561" alt="image" src="https://github.com/user-attachments/assets/1329a257-b72e-441e-8194-c0c488cb0aaa" /> [Fig 13 - Finalizing Installation]
 > <img width="1127" height="390" alt="image" src="https://github.com/user-attachments/assets/fefd7eef-947d-4abd-bcc4-ea88ea5bf0c6" /> [Fig 14 - Removing Optical Drive]
 > <img width="1123" height="603" alt="image" src="https://github.com/user-attachments/assets/d1eaadad-5be6-467e-8414-4d9370ba87dc" /> [Fig 15 - Temporarily Changing Adapter 1 to NAT]
-> <img width="713" height="570" alt="image" src="https://github.com/user-attachments/assets/fb2785e2-e587-41b0-a9e0-cc5e86f99066" />   [Fig 16 - pfSense Menu]
+> <img width="713" height="570" alt="image" src="https://github.com/user-attachments/assets/fb2785e2-e587-41b0-a9e0-cc5e86f99066" /> [Fig 16 - pfSense Menu]
 > <img width="718" height="403" alt="image" src="https://github.com/user-attachments/assets/9899ae9b-07f6-4199-81ea-37152f9db874" /> [Fig 17a - Assigning Interfaces]
 > <img width="720" height="405" alt="image" src="https://github.com/user-attachments/assets/22c17416-6d0f-4b71-aed0-9065b9f48ab5" /> [Fig 17b - Assigning Interfaces]
 > <img width="724" height="354" alt="image" src="https://github.com/user-attachments/assets/087e25dd-c4ea-416c-b380-253f08fb1734" /> [Fig 18a - LAN Interface Configuration]
