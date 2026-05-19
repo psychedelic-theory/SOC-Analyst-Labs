@@ -53,7 +53,13 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 > <img width="1126" height="550" alt="image" src="https://github.com/user-attachments/assets/bfc48185-833a-467c-8e7d-57c32427d895" /> [Fig 6 - Network Adapter 2]
 > <img width="1122" height="547" alt="image" src="https://github.com/user-attachments/assets/a3345aec-aba0-4196-b847-23bd8a28a3a2" /> [Fig 7 - Network Adapter 3]
 > <img width="722" height="566" alt="image" src="https://github.com/user-attachments/assets/51b34d8a-31e6-4c90-92ae-4a2867b4ab9c" /> [Fig 8 - pfSense installation Failure]
-> 
+> <img width="712" height="562" alt="image" src="https://github.com/user-attachments/assets/a3c2eaf9-0d8d-4d8e-9cab-73023c4541b9" /> [Fig 9 - Accept Installation]
+>  <img width="719" height="563" alt="image" src="https://github.com/user-attachments/assets/b2b7cbc8-caa1-47d8-805c-038b2e782c7b" /> [Fig 10 - pfSense Installer]
+> <img width="720" height="567" alt="image" src="https://github.com/user-attachments/assets/189364fd-dbbb-4ad0-826a-c17dd18797b0" /> [Fig 11 - pfSense WAN Interface Setup]
+> <img width="726" height="579" alt="image" src="https://github.com/user-attachments/assets/84fde4ac-e2cf-42fd-8909-f6473a665c6b" /> [Fig 12 - Connectivity Check]
+
+
+
 
 
 
