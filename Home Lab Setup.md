@@ -11,7 +11,7 @@ The completed environemtn will simulate the kind of network an analyst would mon
  
 | Component | Status |
 |---|---|
-| Install & Configure pfSense | Not Started |
+| Install & Configure pfSense | Complete |
 | Install Windows 11 VM | Not Started |
 | Download & Configure Kali Linux VM | Not Started |
 | Install Windows Server | Not Started |
@@ -37,11 +37,20 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 - [ ] Verify connectivity between VMs
 
 ## Notes
+### Paravirtualized Connectivity Issue
  During the pfSense installation in Virtualbox I encountered the VM hanging or failing to detect network interfaces. This failure typically surfaced during the install or after the first boot, with interfaces failling to initialize or assign properly. [Fig 8] The issue was having the network adapter type set to Paravirtualized Network (virtio). 
  
  Paravirtualized adapter generally are preferred because they have a higher performance by bypassing emulation overhead, allowing the guest OS to communicate directly with the hypervisor, lower CPU usage, and better throughput. The combination of VirtualBox, FreeBSD/pfSense introduces instability because the virtio driver stability is dependent on the kernel version in use and a history of Oracle VM VirtualBOX occasional virtio regressions and compatibility inconsistencies with BSD guests. 
  
  To remedy the issue, I changed the adatper type to Intel PRO/1000 MT Desktop for each interface. The tradeoff was for stability over performance. 
+ ### WAN Adapter Atachment Issue
+ I encountered another warning stating that the installer could not reach the Netgate servers during the installation process. The lab was designed to mimic a realistic enterprise environment with pfSense acting as the central firewall and router between three network segments (WAN, LAN 0, & Lan 1). 
+
+ The WAN adapter (Fig 5) was configured as a Bridged Adapter connected to the host machine's Intel WI-FI 7 BE201 wireleess NIC. This introduced a ccommon VirtualBox limitation where bridged networking over a wireless adapter is inherently unreliable. Wi-Fi NICs operate at Layer 2 in a way that most home routers and wireless access points cannot or do not support. Home routers for example typically will not forward traffic destined for a MAC address that differs from the registered host machine. With out pfSense machine having its own unique MAC address, the router silently dropped/ignored the traffic. 
+
+ To resolve the issue, we switched Adapter 1 (Fig 16) from Bridged Adapter to NAT, because NAT does not require selecting a specific host NIC. This allows pfSense to reach the internet without needing to interact with the home router directly, completly bypassing the Wi-Fi bridging limitation.
+
+ 
 
 ### Screenshots
 > <img width="1781" height="1198" alt="image" src="https://github.com/user-attachments/assets/239c29c2-f0e9-48a7-abd1-70ce77574f39" /> [Fig 2 - pfSense Download Page]
@@ -61,6 +70,8 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 > <img width="710" height="561" alt="image" src="https://github.com/user-attachments/assets/1329a257-b72e-441e-8194-c0c488cb0aaa" /> [Fig 14 - Finalizing Installation]
 > <img width="1127" height="390" alt="image" src="https://github.com/user-attachments/assets/fefd7eef-947d-4abd-bcc4-ea88ea5bf0c6" /> [Fig 15 - Removing Optical Drive]
 > <img width="1123" height="603" alt="image" src="https://github.com/user-attachments/assets/d1eaadad-5be6-467e-8414-4d9370ba87dc" /> [Fig 16 - Temporarily Changing Adapter 1 to NAT]
+> <img width="713" height="570" alt="image" src="https://github.com/user-attachments/assets/fb2785e2-e587-41b0-a9e0-cc5e86f99066" /> [Fig 17 - pfSense Menu]
+
 
 
 
