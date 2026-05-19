@@ -22,6 +22,7 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | Install & Configure Splunk | Not Started |
 
 ## Lab Network Diagram
+<img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/ab0cb542-cb0b-4f4a-a970-ea7959ea9a63" />
 
 ## Installing & Configuring pfSense
 
