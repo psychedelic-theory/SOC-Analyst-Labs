@@ -22,9 +22,7 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | Install & Configure Splunk | Not Started |
 
 ## Lab Network Diagram
-<img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" />
-
-
+<img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig 1 - Network Topology]
 
 ## Installing & Configuring pfSense
 
@@ -32,11 +30,13 @@ The completed environemtn will simulate the kind of network an analyst would mon
 pfsense acts as the firewall and router for the lab network, segmenting traffic between machines and simulating an enterprise boundary.
 
 ### Steps
-- [x] Download pfsense ISO
-- [ ] Create pfsense VM in VirtualBox/VMware
+- [x] Download pfsense ISO [Fig 2]
+- [x] Create pfsense VM in VirtualBox/VMware
 - [ ] Configure WAN and LAN interfaces
 - [ ] Set up DHCP for the lab network
 - [ ] Verify connectivity between VMs
 
 ### Screenshots
+> <img width="1781" height="1198" alt="image" src="https://github.com/user-attachments/assets/239c29c2-f0e9-48a7-abd1-70ce77574f39" /> [Fig 2 - pfSense Download Page]
 > 
+
