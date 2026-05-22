@@ -101,6 +101,14 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 - [ ] Join Domain
 
 ## Screenshots
-> <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 3 - Win11 Installing]
+> <img width="1400" height="483" alt="image" src="https://github.com/user-attachments/assets/cd8855d5-00cc-4834-a36c-4756ebcbdca4" /> [Fig 1 - Download Win11 ISO]
+> <img width="2124" height="737" alt="image" src="https://github.com/user-attachments/assets/857c22f4-54a9-4f22-897e-d83886c17bf6" /> [Fig 2a - Win11 VM OS Setup]
+> <img width="2120" height="647" alt="image" src="https://github.com/user-attachments/assets/71d3931c-9d22-4e61-93fe-fc7d1c7c6730" /> [Fig 2b - Win11 Virtual Hardware Setup]
+> <img width="2115" height="935" alt="image" src="https://github.com/user-attachments/assets/72f17ee0-cc61-4421-b12a-b9839335fecb" /> [Fig 2c - Win11 Hard Disk Setup]
 > 
+
+
+
+> <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 3 - Win11 Installing]
+
 
