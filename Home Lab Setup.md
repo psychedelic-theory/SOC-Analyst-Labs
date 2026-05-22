@@ -94,9 +94,9 @@ The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall ma
 Installation and configuration of a Windows 11 virtual machine to serve as a workstation endpoint in the Ecorp network segment.
 
 ### Steps
-- [ ] Download Windows 11 ISO
-- [ ] Create Windows 11 VM in VirtualBox
-- [ ] Configure network adapter to LAN 0
+- [x] Download Windows 11 ISO
+- [x] Create Windows 11 VM in VirtualBox
+- [x] Configure network adapter to LAN 0
 - [ ] Complete initial Windows setup
 - [ ] Join Domain
 
@@ -105,10 +105,13 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="2124" height="737" alt="image" src="https://github.com/user-attachments/assets/857c22f4-54a9-4f22-897e-d83886c17bf6" /> [Fig 2a - Win11 VM OS Setup]
 > <img width="2120" height="647" alt="image" src="https://github.com/user-attachments/assets/71d3931c-9d22-4e61-93fe-fc7d1c7c6730" /> [Fig 2b - Win11 Virtual Hardware Setup]
 > <img width="2115" height="935" alt="image" src="https://github.com/user-attachments/assets/72f17ee0-cc61-4421-b12a-b9839335fecb" /> [Fig 2c - Win11 Hard Disk Setup]
-> 
+> <img width="1147" height="832" alt="image" src="https://github.com/user-attachments/assets/0d6c4072-7da0-4358-827e-b2cd7d7d614b" /> [Fig 3a - Win11 System Settings]
+> <img width="1158" height="545" alt="image" src="https://github.com/user-attachments/assets/9b77d027-81ac-4cc3-a6b0-06e6f8b95d4e" /> [Fig 3b - Win11 Network Settings]
+> <img width="1202" height="976" alt="image" src="https://github.com/user-attachments/assets/2f8ebf59-2d19-45aa-b6a0-bfa13201abd1" /> [Fig 4a - Install Win11]
+> <img width="839" height="656" alt="image" src="https://github.com/user-attachments/assets/58794eb7-eb59-4b7e-b9ae-eaa125e2e0ce" /> [Fig 4b - Windows11 Install Allocation]
+> <img width="1069" height="542" alt="image" src="https://github.com/user-attachments/assets/02f23c36-63b9-4a73-840f-71aed384d34e" /> [Fig 4c - Windows11 Installing]
+> > <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 4d - System Reboot]
+> <img width="1025" height="767" alt="image" src="https://github.com/user-attachments/assets/50fc952a-6ea4-4353-8d7d-cfb9093c3896" /> [Fig 5a - Windows 11 Region Configuration]
 
-
-
-> <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 3 - Win11 Installing]
 
 
