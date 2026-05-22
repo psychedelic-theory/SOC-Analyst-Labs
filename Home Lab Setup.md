@@ -112,6 +112,8 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1069" height="542" alt="image" src="https://github.com/user-attachments/assets/02f23c36-63b9-4a73-840f-71aed384d34e" /> [Fig 4c - Windows11 Installing]
 > > <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 4d - System Reboot]
 > <img width="1025" height="767" alt="image" src="https://github.com/user-attachments/assets/50fc952a-6ea4-4353-8d7d-cfb9093c3896" /> [Fig 5a - Windows 11 Region Configuration]
+> <img width="1024" height="767" alt="image" src="https://github.com/user-attachments/assets/0c215b18-a868-4d21-be68-e51f774716e7" /> [Fig 5b - Windows 11 Internet Configuration]
+> <img width="1025" height="770" alt="image" src="https://github.com/user-attachments/assets/51208f8b-c741-46ef-aa96-d15eed113dc7" /> [Fig 5c - Windows 11 User Creation]
 
 
 
