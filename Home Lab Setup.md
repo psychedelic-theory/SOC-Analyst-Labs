@@ -99,3 +99,8 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 - [ ] Configure network adapter to LAN 0
 - [ ] Complete initial Windows setup
 - [ ] Join Domain
+
+## Screenshots
+> <img width="1021" height="763" alt="image" src="https://github.com/user-attachments/assets/ae42e24f-1da4-44a2-b331-7542c488f4a8" /> [Fig 3 - Win11 Installing]
+> 
+
