@@ -11,7 +11,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
  
 | Component | Status | 
 |---|---|
-| [Install & Configure pfSense](#pfsense) | Incomplete |
+| [Install & Configure pfSense Part 1](#pfsense) | Complete |
+| [Configure pfSense Part 2](#pfSense2) | in Progress |
 | [Install Windows 11 VM](#win11) | Complete |
 | Download & Configure Kali Linux VM | Not Started |
 | Install Windows Server | Not Started |
@@ -34,7 +35,6 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 - [x] Create pfsense VM in VirtualBox/VMware
 - [x] Configure WAN and LAN interfaces
 - [X] Set up DHCP for the lab network
-- [ ] Verify connectivity between VMs
 
 ## Notes
 ### Paravirtualized Connectivity Issue
@@ -88,6 +88,14 @@ The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall ma
 > <img width="727" height="217" alt="image" src="https://github.com/user-attachments/assets/c7b3fcdf-3bb9-4323-a5f4-030b730572c6" /> [Fig 19c - OPT1 Interface Configuration]
 > <img width="727" height="410" alt="image" src="https://github.com/user-attachments/assets/b5cb8c52-5612-46e1-9534-097d6ea3a831" /> [Fig 20 - pfSense Final Configuration]
 
+# <a name="pfsense"></a>Installing & Configuring pfSense Part 1
+
+### Overview
+
+### Steps
+- [ ]
+
+
 # <a name="win11"></a>Installing Windows 11 VM
 
 ### Overview
@@ -127,6 +135,3 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1021" height="934" alt="image" src="https://github.com/user-attachments/assets/7d7b4b50-3945-48cd-a838-634026a668ae" /> [Fig 6.4 - Reboot System]
 > <img width="1556" height="1031" alt="image" src="https://github.com/user-attachments/assets/2493f5d1-c87f-47f6-b43a-cfd728d29d71" /> [Fig 7 - Bidirectional Copy/Paste]
 > <img width="1112" height="627" alt="image" src="https://github.com/user-attachments/assets/ff4f54f1-6bef-4457-9381-666167f8b191" /> [Fig 8 - ip address & google ping]
-
-
-
