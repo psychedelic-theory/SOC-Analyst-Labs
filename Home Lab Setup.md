@@ -114,6 +114,17 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1025" height="767" alt="image" src="https://github.com/user-attachments/assets/50fc952a-6ea4-4353-8d7d-cfb9093c3896" /> [Fig 5a - Windows 11 Region Configuration]
 > <img width="1024" height="767" alt="image" src="https://github.com/user-attachments/assets/0c215b18-a868-4d21-be68-e51f774716e7" /> [Fig 5b - Windows 11 Internet Configuration]
 > <img width="1025" height="770" alt="image" src="https://github.com/user-attachments/assets/51208f8b-c741-46ef-aa96-d15eed113dc7" /> [Fig 5c - Windows 11 User Creation]
+> <img width="1020" height="766" alt="image" src="https://github.com/user-attachments/assets/b331698e-86d3-452a-8db5-cfa75df4a1d7" /> [Fig 5d - Windows 11 Password Creation]
+> <img width="1022" height="770" alt="image" src="https://github.com/user-attachments/assets/8dfb9209-12e5-4cc0-bf6d-075b52deb08c" /> [Fig 5e - Windows 11 Password Confirmation]
+> <img width="1025" height="766" alt="image" src="https://github.com/user-attachments/assets/add2a6a6-5a4a-40c5-8acb-9302dfffec5a" /> [Fig 5f - Windows Security Questions]
+> <img width="1025" height="769" alt="image" src="https://github.com/user-attachments/assets/708fb26c-ff58-4eed-8c05-024718a746bd" /> [Fig 5g - Disable Privacy Settings]
+> <img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/14db4ea6-c878-40ec-8fb3-8b77c3783410" /> [Fig 5h - Final Restart]
+> 
+
+
+
+
+
 
 
 
