@@ -117,7 +117,7 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 - [x] Download Windows 11 ISO
 - [x] Create Windows 11 VM in VirtualBox
 - [x] Configure network adapter to LAN 0
-- [ ] Complete initial Windows setup
+- [x] Complete initial Windows setup
 - [ ] Join Domain
 
 ## Screenshots
