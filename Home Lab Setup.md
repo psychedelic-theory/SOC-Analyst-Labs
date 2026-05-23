@@ -11,8 +11,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
  
 | Component | Status | 
 |---|---|
-| [Install & Configure pfSense](#pfsense) | Complete |
-| [Install Windows 11 VM](#win11) | In Progress |
+| [Install & Configure pfSense](#pfsense) | Incomplete |
+| [Install Windows 11 VM](#win11) | Complete |
 | Download & Configure Kali Linux VM | Not Started |
 | Install Windows Server | Not Started |
 | Install & Configure Active Directory | Not Started |
@@ -24,7 +24,7 @@ The completed environemtn will simulate the kind of network an analyst would mon
 ## Lab Network Diagram
 <img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig 1 - Network Topology]
 
-# <a name="pfsense"></a>Installing & Configuring pfSense
+# <a name="pfsense"></a>Installing & Configuring pfSense Part 1
 
 ### Overview
 pfsense acts as the firewall and router for the lab network, segmenting traffic between machines and simulating an enterprise boundary.
@@ -125,6 +125,8 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1023" height="930" alt="image" src="https://github.com/user-attachments/assets/0fd59f9e-122a-42b2-baf0-ca1bfa70d8fd" /> [Fig 6.2 - Install Location]
 > <img width="1023" height="928" alt="image" src="https://github.com/user-attachments/assets/4dc34707-5f76-40fb-991c-bf70573cd863" /> [Fig 6.3 - Choose Components]
 > <img width="1021" height="934" alt="image" src="https://github.com/user-attachments/assets/7d7b4b50-3945-48cd-a838-634026a668ae" /> [Fig 6.4 - Reboot System]
+> <img width="1556" height="1031" alt="image" src="https://github.com/user-attachments/assets/2493f5d1-c87f-47f6-b43a-cfd728d29d71" /> [Fig 7 - Bidirectional Copy/Paste]
+> <img width="1112" height="627" alt="image" src="https://github.com/user-attachments/assets/ff4f54f1-6bef-4457-9381-666167f8b191" /> [Fig 8 - ip address & google ping]
 
 
 
