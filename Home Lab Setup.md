@@ -91,10 +91,22 @@ The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall ma
 # <a name="pfsense2"></a>Configuring pfSense Part 2
 
 ### Overview
+This section covers the initial web-based configuration of pfSense after installation. Using the Windows 11 VM as your management station, you access the pfSense web GUI, run through the setup wizard, name and organize your network interfaces, configure DNS and DHCP services, assign a static IP to the Windows 11 machine, and build out a structured set of firewall rules to control traffic between your network segments (ECorp LAN, Attack LAN, and the internet).
+By the end of this section, pfSense is fully configured as the segmented firewall and router for the lab environment.
 
 ### Steps
-- [ ]
-
+- [ ] Access pfSense Web GUI
+- [ ] Run the Setup Wizard
+- [ ] Name the interfaces
+- [ ] Configure DNS Resolver
+- [ ] Enable Hardware Checksum Offloading
+- [ ] Assign a Static DHCP Lease to Windows 11
+- [ ] Set DNS Servers for DHCP
+- [ ] Create a Firewall Alias
+- [ ] Create ECorp Firewall Rules
+- [ ] Create AttackLAN Firewall Rules
+- [ ] Verify Connectivity (Optional)
+- [ ] Reboot pfSense
 
 # <a name="win11"></a>Installing Windows 11 VM
 
