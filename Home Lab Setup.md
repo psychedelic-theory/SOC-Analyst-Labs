@@ -119,7 +119,15 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1025" height="766" alt="image" src="https://github.com/user-attachments/assets/add2a6a6-5a4a-40c5-8acb-9302dfffec5a" /> [Fig 5f - Windows Security Questions]
 > <img width="1025" height="769" alt="image" src="https://github.com/user-attachments/assets/708fb26c-ff58-4eed-8c05-024718a746bd" /> [Fig 5g - Disable Privacy Settings]
 > <img width="1021" height="767" alt="image" src="https://github.com/user-attachments/assets/14db4ea6-c878-40ec-8fb3-8b77c3783410" /> [Fig 5h - Final Restart]
-> <img width="1070" height="944" alt="image" src="https://github.com/user-attachments/assets/7bad49fb-af5d-400b-9db4-d41e18d73200" /> [Fig 
+> <img width="1070" height="944" alt="image" src="https://github.com/user-attachments/assets/7bad49fb-af5d-400b-9db4-d41e18d73200" /> [Fig 6a - Insert Guest Additions]
+> <img width="1036" height="935" alt="image" src="https://github.com/user-attachments/assets/a1a175bc-de2e-46ee-8333-75c99d64283e" /> [Fig 6b - Download Guest Additions]
+> <img width="1027" height="935" alt="image" src="https://github.com/user-attachments/assets/00355270-85e6-4c56-aec3-56ec960c4411" /> [Fig 6.1 - Accept All Necessary Drivers & Software]
+> > <img width="1023" height="930" alt="image" src="https://github.com/user-attachments/assets/0fd59f9e-122a-42b2-baf0-ca1bfa70d8fd" /> [Fig 6.2 - Install Location]
+> > <img width="1023" height="928" alt="image" src="https://github.com/user-attachments/assets/4dc34707-5f76-40fb-991c-bf70573cd863" /> [Fig 6.3 - Choose Components]
+
+
+
+
 
 
 
