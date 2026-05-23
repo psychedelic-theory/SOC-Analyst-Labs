@@ -88,7 +88,7 @@ The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall ma
 > <img width="727" height="217" alt="image" src="https://github.com/user-attachments/assets/c7b3fcdf-3bb9-4323-a5f4-030b730572c6" /> [Fig 19c - OPT1 Interface Configuration]
 > <img width="727" height="410" alt="image" src="https://github.com/user-attachments/assets/b5cb8c52-5612-46e1-9534-097d6ea3a831" /> [Fig 20 - pfSense Final Configuration]
 
-# <a name="pfsense"></a>Installing & Configuring pfSense Part 1
+# <a name="pfsense2"></a>Configuring pfSense Part 2
 
 ### Overview
 
