@@ -122,18 +122,9 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1070" height="944" alt="image" src="https://github.com/user-attachments/assets/7bad49fb-af5d-400b-9db4-d41e18d73200" /> [Fig 6a - Insert Guest Additions]
 > <img width="1036" height="935" alt="image" src="https://github.com/user-attachments/assets/a1a175bc-de2e-46ee-8333-75c99d64283e" /> [Fig 6b - Download Guest Additions]
 > <img width="1027" height="935" alt="image" src="https://github.com/user-attachments/assets/00355270-85e6-4c56-aec3-56ec960c4411" /> [Fig 6.1 - Accept All Necessary Drivers & Software]
-> > <img width="1023" height="930" alt="image" src="https://github.com/user-attachments/assets/0fd59f9e-122a-42b2-baf0-ca1bfa70d8fd" /> [Fig 6.2 - Install Location]
-> > <img width="1023" height="928" alt="image" src="https://github.com/user-attachments/assets/4dc34707-5f76-40fb-991c-bf70573cd863" /> [Fig 6.3 - Choose Components]
-
-
-
-
-
-
-
-
-
-
+> <img width="1023" height="930" alt="image" src="https://github.com/user-attachments/assets/0fd59f9e-122a-42b2-baf0-ca1bfa70d8fd" /> [Fig 6.2 - Install Location]
+> <img width="1023" height="928" alt="image" src="https://github.com/user-attachments/assets/4dc34707-5f76-40fb-991c-bf70573cd863" /> [Fig 6.3 - Choose Components]
+> <img width="1021" height="934" alt="image" src="https://github.com/user-attachments/assets/7d7b4b50-3945-48cd-a838-634026a668ae" /> [Fig 6.4 - Reboot System]
 
 
 
