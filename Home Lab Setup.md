@@ -108,6 +108,10 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [ ] Verify Connectivity (Optional)
 - [ ] Reboot pfSense
 
+### Notes
+
+### Screenshots
+
 # <a name="win11"></a>Installing Windows 11 VM
 
 ### Overview
