@@ -111,6 +111,24 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 ### Notes
 
 ### Screenshots
+> <img width="1422" height="932" alt="image" src="https://github.com/user-attachments/assets/20a3b2de-7e65-4226-b577-cab777205a17" /> [Fig 1 - pfSense's Self-Signed Certificate Warning]
+> <img width="1424" height="931" alt="image" src="https://github.com/user-attachments/assets/c4891529-52cc-4e28-b0e0-fbb7e9592984" /> [Fig 2 - pfSense Web GUI]
+> <img width="1422" height="926" alt="image" src="https://github.com/user-attachments/assets/607a42c7-48e0-45c7-a39e-e866e06b5b78" /> [Fig 3 - pfsense GUI Setup]
+> <img width="1425" height="930" alt="image" src="https://github.com/user-attachments/assets/e17b74e7-ab92-4abc-8a4f-511dbeeb06e8" /> [Fig 4 - pfSense GUI Netgate]
+> <img width="1422" height="930" alt="image" src="https://github.com/user-attachments/assets/2f85f23a-46f1-4e6a-8387-6e1d5c008952" /> [Fig 5 - Password Change]
+> <img width="1418" height="925" alt="image" src="https://github.com/user-attachments/assets/dcfe0262-7c64-4531-b5c7-e91282adfe0b" /> [Fig 6 - Domain Name Change]
+> <img width="1430" height="932" alt="image" src="https://github.com/user-attachments/assets/6aa98ce8-e07b-4308-a6bc-dc495a05beff" /> [Fig 7 - Time Server Information]
+> <img width="1420" height="931" alt="image" src="https://github.com/user-attachments/assets/c1b020e8-7514-4385-b84d-e5fea0ab1afc" /> [Fig 8 - WAN Interface Configuration]
+> <img width="1423" height="933" alt="image" src="https://github.com/user-attachments/assets/7f7105e8-bdf6-4a26-bffb-8d284eba0ac2" /> [Fig 9 - LAN Interface Configuration]
+> 
+
+
+
+
+
+
+
+
 
 # <a name="win11"></a>Installing Windows 11 VM
 
