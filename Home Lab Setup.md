@@ -120,7 +120,12 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1430" height="932" alt="image" src="https://github.com/user-attachments/assets/6aa98ce8-e07b-4308-a6bc-dc495a05beff" /> [Fig 7 - Time Server Information]
 > <img width="1420" height="931" alt="image" src="https://github.com/user-attachments/assets/c1b020e8-7514-4385-b84d-e5fea0ab1afc" /> [Fig 8 - WAN Interface Configuration]
 > <img width="1423" height="933" alt="image" src="https://github.com/user-attachments/assets/7f7105e8-bdf6-4a26-bffb-8d284eba0ac2" /> [Fig 9 - LAN Interface Configuration]
-> 
+> <img width="1422" height="932" alt="image" src="https://github.com/user-attachments/assets/39a53730-dcf8-4290-b9a4-d1582d56b4ce" /> [Fig 10 - Change Admin Account Password]
+> <img width="1420" height="929" alt="image" src="https://github.com/user-attachments/assets/56dd72f5-5248-4bb4-b22a-a31d67369219" /> [Fig 11 - Reload Wizard Configuration]
+> <img width="1419" height="925" alt="image" src="https://github.com/user-attachments/assets/97ffd2f7-d132-4dd7-965b-79ee2e8ab146" /> [Fig 12 - Wizard Setup Complete]
+
+
+
 
 
 
