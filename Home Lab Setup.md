@@ -95,8 +95,8 @@ This section covers the initial web-based configuration of pfSense after install
 By the end of this section, pfSense is fully configured as the segmented firewall and router for the lab environment.
 
 ### Steps
-- [ ] Access pfSense Web GUI
-- [ ] Run the Setup Wizard
+- [X] Access pfSense Web GUI
+- [X] Run the Setup Wizard
 - [ ] Name the interfaces
 - [ ] Configure DNS Resolver
 - [ ] Enable Hardware Checksum Offloading
@@ -123,16 +123,7 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1422" height="932" alt="image" src="https://github.com/user-attachments/assets/39a53730-dcf8-4290-b9a4-d1582d56b4ce" /> [Fig 10 - Change Admin Account Password]
 > <img width="1420" height="929" alt="image" src="https://github.com/user-attachments/assets/56dd72f5-5248-4bb4-b22a-a31d67369219" /> [Fig 11 - Reload Wizard Configuration]
 > <img width="1419" height="925" alt="image" src="https://github.com/user-attachments/assets/97ffd2f7-d132-4dd7-965b-79ee2e8ab146" /> [Fig 12 - Wizard Setup Complete]
-
-
-
-
-
-
-
-
-
-
+> <img width="1418" height="926" alt="image" src="https://github.com/user-attachments/assets/dd69652f-325f-4df1-a134-a499dce400ac" /> [Fig 13 - Copyright and Trademark]
 
 
 # <a name="win11"></a>Installing Windows 11 VM
