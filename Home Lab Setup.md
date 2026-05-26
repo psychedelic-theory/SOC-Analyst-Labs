@@ -14,7 +14,7 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Install & Configure pfSense Part 1](#pfsense) | Complete |
 | [Configure pfSense Part 2](#pfSense2) | Complete |
 | [Install Windows 11 VM](#win11) | Complete |
-| [Download & Configure Kali Linux VM](#kali) | In Progress |
+| [Download & Configure Kali Linux VM](#kali) | Complete |
 | [Install Windows Server](#wser) | In Progress |
 | Install & Configure Active Directory | Not Started |
 | Manage Users, Groups & Policies | Not Started |
@@ -242,6 +242,8 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 > <img width="1114" height="541" alt="image" src="https://github.com/user-attachments/assets/9cbe5592-e3e0-4dbf-8c9e-b4af9cc0a708" /> [Fig 6 - Network Settings]
 > <img width="1123" height="427" alt="image" src="https://github.com/user-attachments/assets/5dc8657a-0f8d-4151-b36f-34b346d7f5b1" /> [Fig 7 - Bidirectional Clipping]
 > <img width="1286" height="962" alt="image" src="https://github.com/user-attachments/assets/2be69eb2-a0e8-42f5-8c40-a34c66a899a3" /> [Fig 8 - Kali Homepage]
+> <img width="648" height="518" alt="image" src="https://github.com/user-attachments/assets/25fe415d-eb44-42f5-898f-2c1037aaac1f" /> [Fig 9 - Connectivity Test]
+
 
 # <a name="wser"></a> Installing Windows Server
 
