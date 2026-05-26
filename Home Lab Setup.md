@@ -12,10 +12,10 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | Component | Status | 
 |---|---|
 | [Install & Configure pfSense Part 1](#pfsense) | Complete |
-| [Configure pfSense Part 2](#pfSense2) | In Progress |
+| [Configure pfSense Part 2](#pfSense2) | Complete |
 | [Install Windows 11 VM](#win11) | Complete |
 | [Download & Configure Kali Linux VM](#kali) | In Progress |
-| Install Windows Server | Not Started |
+| [Install Windows Server](#wser) | In Progress |
 | Install & Configure Active Directory | Not Started |
 | Manage Users, Groups & Policies | Not Started |
 | Domain Joining | Not Started |
@@ -106,7 +106,33 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Verify Connectivity (Optional)
 - [X] Reboot pfSense
 
-### Notes
+## Notes
+### Setup Wizard
+Unchecking "Override DNS" on the General Information screen matters because leaving it enabled would allow DHCP/PPP on the WAN to override the DNS settings you configure, which can cause inconsistent name resolution behavior across the lab.
+
+Unchecking "Block RFC1918 Private Networks" on the WAN interface VirtualBox NAT, the WAN-side IP is itself a private address ('10.0.2.15'). Leaving this option checked would cause pfSense to silently drop its own upstream traffic, breaking internet access entirely. this is a common point of confusion when running pfSense in a virtualized environment rather than on physical hardware where the WAN would normally face a public IP.
+
+### DNS Resolver Configuration
+Enabling DHCP Registration and Static DHCP in the DNS Resolver ensures that machines on the network can resolve each other by hostname rather than just IP address. This becomes important later when domain joining and Active Directory are introduced - hostname resolution needs to be reliabnle before those components will function properly. 
+
+Enabling Prefetch Support and Prefetch DNS Key Support in the Advanced Settings keeps DNS performant by refreshing cache entries before they expire and reducing DNSSEC validation latency. These are small optimizations, but they reflect good practice for a lab simulating an enterprise environment.
+
+### Hardware Checksum Offloading
+Disabling hardware checksum offloading under `System → Advanced → Networking` is a VirtualBox-specific requirement. VirtualBox's virtual NICs do not reliably handle checksum offloading, which can cause packet corruption or intermittent connectivity failures that are difficult to diagnose. The symptoms can look like a firewall or routing issue when the real cause is at a much lower level. Disabling it forces checksums to be calculated in software, which is slower in theory but far more stable in this environment. This is a known quirk of running pfSense under VirtualBox and worth documenting to avoid chasing phantom network issues later.
+
+## Firewall Alias (RFC1918) 
+Creating an alias that groups the three private IPv4 ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) into a single named object called `RFC1918` is a small step that significantly improves firewall rule readability. Rather than writing three separate destination entries every time a rule needs to reference private address space, a single alias reference handles it. This is standard practice in production firewall management and keeps the rule base clean and maintainable as the lab grows.
+
+## General Observations
+ 
+A few patterns worth carrying forward from this section:
+ 
+**Apply Changes is not optional.** pfSense separates saving a configuration from activating it. A saved rule that has not been applied is not running. This is easy to forget mid-workflow when moving quickly between settings.
+ 
+**Order matters in firewall rules.** pfSense evaluates rules top to bottom and stops at the first match. The block-all rule at the bottom of the ECorp ruleset only works as a catch-all because the more specific pass rules sit above it. Placing rules in the wrong order can silently allow or deny traffic in unexpected ways.
+ 
+**Both DHCP scopes need attention.** Any configuration applied to the ECORP DHCP scope (DNS servers, options) usually also needs to be applied to the ATTACKLAN scope. It is a consistent source of asymmetric behavior when one interface is configured and the other is forgotten.
+
 
 ### Screenshots
 > <img width="1422" height="932" alt="image" src="https://github.com/user-attachments/assets/20a3b2de-7e65-4226-b577-cab777205a17" /> [Fig 1 - pfSense's Self-Signed Certificate Warning]
@@ -197,8 +223,8 @@ Downloading and importing the pre-built Kali Linux VM into VirtualBox and config
 - [X] Configure the network adapter to Internal Network / LAN1 with Paravirtualized Network
 - [X] Enable Bidirectional Shared Clipboard and Drag-and-Drop
 - [X] Start the VM and log in
-- [ ] Verify Network Assignment with 'ip a'
-- [ ] Verify Internet Connectivity with 'ping 8.8.8.8'
+- [X] Verify Network Assignment with 'ip a'
+- [X] Verify Internet Connectivity with 'ping 8.8.8.8'
 
 ## Notes
 ### VM Image over Installer Image
@@ -216,3 +242,13 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 > <img width="1114" height="541" alt="image" src="https://github.com/user-attachments/assets/9cbe5592-e3e0-4dbf-8c9e-b4af9cc0a708" /> [Fig 6 - Network Settings]
 > <img width="1123" height="427" alt="image" src="https://github.com/user-attachments/assets/5dc8657a-0f8d-4151-b36f-34b346d7f5b1" /> [Fig 7 - Bidirectional Clipping]
 > <img width="1286" height="962" alt="image" src="https://github.com/user-attachments/assets/2be69eb2-a0e8-42f5-8c40-a34c66a899a3" /> [Fig 8 - Kali Homepage]
+
+# <a name="wser"></a> Installing Windows Server
+
+### Overview
+
+### Steps
+
+## Notes
+
+### Screenshots
