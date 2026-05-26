@@ -12,9 +12,9 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | Component | Status | 
 |---|---|
 | [Install & Configure pfSense Part 1](#pfsense) | Complete |
-| [Configure pfSense Part 2](#pfSense2) | in Progress |
+| [Configure pfSense Part 2](#pfSense2) | In Progress |
 | [Install Windows 11 VM](#win11) | Complete |
-| Download & Configure Kali Linux VM | Not Started |
+| [Download & Configure Kali Linux VM](#kaliLinux) | In Progress |
 | Install Windows Server | Not Started |
 | Install & Configure Active Directory | Not Started |
 | Manage Users, Groups & Policies | Not Started |
@@ -137,8 +137,6 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1436" height="918" alt="image" src="https://github.com/user-attachments/assets/0a28aa0d-36bc-4b29-a7ce-e152e1bfedad" /> [Fig 24a - Firewall Aliases]
 > 
 
-
-
 # <a name="win11"></a>Installing Windows 11 VM
 
 ### Overview
@@ -178,3 +176,22 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 > <img width="1021" height="934" alt="image" src="https://github.com/user-attachments/assets/7d7b4b50-3945-48cd-a838-634026a668ae" /> [Fig 6.4 - Reboot System]
 > <img width="1556" height="1031" alt="image" src="https://github.com/user-attachments/assets/2493f5d1-c87f-47f6-b43a-cfd728d29d71" /> [Fig 7 - Bidirectional Copy/Paste]
 > <img width="1112" height="627" alt="image" src="https://github.com/user-attachments/assets/ff4f54f1-6bef-4457-9381-666167f8b191" /> [Fig 8 - ip address & google ping]
+
+# <a name="kaliLinux"></a>Download & Configure Kali Linux VM
+
+### Overview
+Downloading and importing the pre-built Kali Linux VM into VirtualBox and configuring it to operate on the Attack LAN segment. Unlike the Windows 11 VM which was installed from an ISO, Kali is imported as pre-built virtual machine image - significantly streamlining setup. Once networked and booted, Kali will serve as the attacker machine in the lab, sitting on the OPT1 (Attack LAN) segment isolated from the ECorp network by pfSense firewall rules. 
+
+### Steps 
+- [ ] Download Kali Linux VM Image From kali.org
+- [ ] Extract the VM archive using 7-Zip
+- [ ] open the .vbox file in VirtualBoc
+- [ ] Configure the network adapter to Internal Network / LAN1 with Paravirtualized Network
+- [ ] Enable Bidirectional Shared Clipboard and Drag-and-Drop
+- [ ] Start the VM and log in
+- [ ] Verify Network Assignment with 'ip a'
+- [ ] Verify Internet Connectivity with 'ping 8.8.8.8'
+
+### Notes
+
+### Screenshots
