@@ -96,8 +96,8 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Access pfSense Web GUI
 - [X] Run the Setup Wizard
 - [X] Name the interfaces
-- [ ] Configure DNS Resolver
-- [ ] Enable Hardware Checksum Offloading
+- [X] Configure DNS Resolver
+- [X] Enable Hardware Checksum Offloading
 - [ ] Assign a Static DHCP Lease to Windows 11
 - [ ] Set DNS Servers for DHCP
 - [ ] Create a Firewall Alias
@@ -129,14 +129,11 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1438" height="898" alt="image" src="https://github.com/user-attachments/assets/32760b64-7338-45fb-8b9b-362473998fd8" /> [Fig 17 - System/Advanced/Networking]
 > <img width="1432" height="903" alt="image" src="https://github.com/user-attachments/assets/71e707ef-9cce-4a83-b73b-55444b7e12fe" /> [Fig 18 - Reboot Hardware Checksum Setting]
 > <img width="1432" height="896" alt="image" src="https://github.com/user-attachments/assets/578ac987-0266-4ec0-97aa-0c5a8259d912" /> [Fig 19 - Reboot Page]
-
-
-
-
-
-
-
-
+> <img width="1439" height="901" alt="image" src="https://github.com/user-attachments/assets/1a76c719-7908-43b4-b14b-ad74f3ad6bd0" /> [Fig 20 - DHCP Leases]
+> <img width="1435" height="1530" alt="image" src="https://github.com/user-attachments/assets/238865f1-2ea0-478b-8cb5-a6a15efe691a" /> [Fig 21 - Win VM Static Mapping Configuration]
+> <img width="1107" height="800" alt="image" src="https://github.com/user-attachments/assets/53469801-e138-483a-ac88-97c0d54e4bdc" /> [Fig 22 - Successful Static Mapping]
+> <img width="1437" height="1450" alt="image" src="https://github.com/user-attachments/assets/dc9099f1-a37e-42f8-bfed-ae58f94ec95b" /> [Fig 23a - ECORP DHCP Server]
+> <img width="1432" height="1485" alt="image" src="https://github.com/user-attachments/assets/10d91049-e69f-472b-b82e-a17c359a0bf3" /> [Fig 23b - AttackLAN DHCP Server]
 
 
 # <a name="win11"></a>Installing Windows 11 VM
