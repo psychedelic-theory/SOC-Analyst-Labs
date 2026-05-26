@@ -141,12 +141,9 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1452" height="1058" alt="image" src="https://github.com/user-attachments/assets/55590b28-1871-4396-88f9-90bab53ee50b" /> [Fig 25d - Firewall Rule Blocks Anything Prev. Unspecified]
 > <img width="1439" height="929" alt="image" src="https://github.com/user-attachments/assets/1e354184-1441-4ae8-ac7b-716c36085c5a" /> [Fig 25e - ECORP Firewall Rules]
 > <img width="1443" height="1058" alt="image" src="https://github.com/user-attachments/assets/e113c728-cb9c-4cfa-8849-43d2cf893f4c" /> [Fig 26a - AttackLAN Firewall Rule ~ Traffic from AL to ECorp]
-> 
-
-
-
-
-
+> <img width="1441" height="1060" alt="image" src="https://github.com/user-attachments/assets/e6045ddc-2034-4382-86a2-85a187e40417" /> [Fig 26b - AttackLAN Firewall Rule ~ Traffic to Internet]
+> <img width="1435" height="927" alt="image" src="https://github.com/user-attachments/assets/0f6995a3-dbb5-44e2-982f-938e4a8fd338" /> [Fig 26c - AttackLAN Firewall Rules]
+> <img width="1446" height="453" alt="image" src="https://github.com/user-attachments/assets/e0e3dc0a-e214-47ed-973e-8fb63b8655fd" /> [Fig 27 - Diagnostics/Reboot]
 
 # <a name="win11"></a>Installing Windows 11 VM
 
