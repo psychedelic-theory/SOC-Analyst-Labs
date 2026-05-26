@@ -103,8 +103,8 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Create a Firewall Alias
 - [X] Create ECorp Firewall Rules
 - [X] Create AttackLAN Firewall Rules
-- [ ] Verify Connectivity (Optional)
-- [ ] Reboot pfSense
+- [X] Verify Connectivity (Optional)
+- [X] Reboot pfSense
 
 ### Notes
 
