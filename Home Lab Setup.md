@@ -192,7 +192,12 @@ Downloading and importing the pre-built Kali Linux VM into VirtualBox and config
 - [ ] Verify Network Assignment with 'ip a'
 - [ ] Verify Internet Connectivity with 'ping 8.8.8.8'
 
-### Notes
+## Notes
+### VM Image over Installer Image
+Select Virtual Machines and then choose VirtualBox as your hypervisor. The pre-built VM image skips the full OS installation process and drops you directly into a configured Kali environment, which is the faster path for lab purposes. 
+
+### Default Credentials
+Kali's pre-built VM ships with default credentials: username kali, password kali. You will be prompted at the login screen immediately on boot. It is good practice to change these once the VM is up, especially in a lab that simulates a real enterprise network. 
 
 ### Screenshots
 > <img width="1443" height="1118" alt="image" src="https://github.com/user-attachments/assets/6bb8fb47-ccbd-4f68-92b9-420a2366ab1f" /> [Fig 1 - Kali Landing Page]
@@ -202,10 +207,4 @@ Downloading and importing the pre-built Kali Linux VM into VirtualBox and config
 > <img width="1436" height="899" alt="image" src="https://github.com/user-attachments/assets/b17a3a04-dd3e-4d7d-a505-85c033685ea5" /> [Fig 5 - Kali Linux VM]
 > <img width="1114" height="541" alt="image" src="https://github.com/user-attachments/assets/9cbe5592-e3e0-4dbf-8c9e-b4af9cc0a708" /> [Fig 6 - Network Settings]
 > <img width="1123" height="427" alt="image" src="https://github.com/user-attachments/assets/5dc8657a-0f8d-4151-b36f-34b346d7f5b1" /> [Fig 7 - Bidirectional Clipping]
-> 
-
-
-
-
-
-
+> <img width="1286" height="962" alt="image" src="https://github.com/user-attachments/assets/2be69eb2-a0e8-42f5-8c40-a34c66a899a3" /> [Fig 8 - Kali Homepage]
