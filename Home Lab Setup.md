@@ -183,15 +183,29 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 Downloading and importing the pre-built Kali Linux VM into VirtualBox and configuring it to operate on the Attack LAN segment. Unlike the Windows 11 VM which was installed from an ISO, Kali is imported as pre-built virtual machine image - significantly streamlining setup. Once networked and booted, Kali will serve as the attacker machine in the lab, sitting on the OPT1 (Attack LAN) segment isolated from the ECorp network by pfSense firewall rules. 
 
 ### Steps 
-- [ ] Download Kali Linux VM Image From kali.org
-- [ ] Extract the VM archive using 7-Zip
-- [ ] open the .vbox file in VirtualBoc
-- [ ] Configure the network adapter to Internal Network / LAN1 with Paravirtualized Network
-- [ ] Enable Bidirectional Shared Clipboard and Drag-and-Drop
-- [ ] Start the VM and log in
+- [X] Download Kali Linux VM Image From kali.org
+- [X] Extract the VM archive using 7-Zip
+- [X] open the .vbox file in VirtualBoc
+- [X] Configure the network adapter to Internal Network / LAN1 with Paravirtualized Network
+- [X] Enable Bidirectional Shared Clipboard and Drag-and-Drop
+- [X] Start the VM and log in
 - [ ] Verify Network Assignment with 'ip a'
 - [ ] Verify Internet Connectivity with 'ping 8.8.8.8'
 
 ### Notes
 
 ### Screenshots
+> <img width="1443" height="1118" alt="image" src="https://github.com/user-attachments/assets/6bb8fb47-ccbd-4f68-92b9-420a2366ab1f" /> [Fig 1 - Kali Landing Page]
+> <img width="1438" height="1117" alt="image" src="https://github.com/user-attachments/assets/1daf2006-7344-41fd-a36e-681d730ff67a" /> [Fig 2 - Pre-built VMs]
+> <img width="1141" height="935" alt="image" src="https://github.com/user-attachments/assets/d22c0ff3-39dc-4875-a9d2-15aaf5f35a4a" /> [Fig 3 - Extracting Kali VM]
+> <img width="1513" height="628" alt="image" src="https://github.com/user-attachments/assets/b784e5c4-b598-486c-b7a1-2e090b8e9308" /> [Fig 4 - Extracted Files]
+> <img width="1436" height="899" alt="image" src="https://github.com/user-attachments/assets/b17a3a04-dd3e-4d7d-a505-85c033685ea5" /> [Fig 5 - Kali Linux VM]
+> <img width="1114" height="541" alt="image" src="https://github.com/user-attachments/assets/9cbe5592-e3e0-4dbf-8c9e-b4af9cc0a708" /> [Fig 6 - Network Settings]
+> <img width="1123" height="427" alt="image" src="https://github.com/user-attachments/assets/5dc8657a-0f8d-4151-b36f-34b346d7f5b1" /> [Fig 7 - Bidirectional Clipping]
+> 
+
+
+
+
+
+
