@@ -98,9 +98,9 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Name the interfaces
 - [X] Configure DNS Resolver
 - [X] Enable Hardware Checksum Offloading
-- [ ] Assign a Static DHCP Lease to Windows 11
-- [ ] Set DNS Servers for DHCP
-- [ ] Create a Firewall Alias
+- [X] Assign a Static DHCP Lease to Windows 11
+- [X] Set DNS Servers for DHCP
+- [X] Create a Firewall Alias
 - [ ] Create ECorp Firewall Rules
 - [ ] Create AttackLAN Firewall Rules
 - [ ] Verify Connectivity (Optional)
