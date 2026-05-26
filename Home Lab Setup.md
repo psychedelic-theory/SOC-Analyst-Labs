@@ -101,8 +101,8 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Assign a Static DHCP Lease to Windows 11
 - [X] Set DNS Servers for DHCP
 - [X] Create a Firewall Alias
-- [ ] Create ECorp Firewall Rules
-- [ ] Create AttackLAN Firewall Rules
+- [X] Create ECorp Firewall Rules
+- [X] Create AttackLAN Firewall Rules
 - [ ] Verify Connectivity (Optional)
 - [ ] Reboot pfSense
 
@@ -137,7 +137,14 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1436" height="918" alt="image" src="https://github.com/user-attachments/assets/0a28aa0d-36bc-4b29-a7ce-e152e1bfedad" /> [Fig 24a - Firewall Aliases]
 > <img width="1437" height="1061" alt="image" src="https://github.com/user-attachments/assets/8c330fab-a1fc-418d-a5f9-adbb4447aad0" /> [Fig 25a - Ecorp Firewall Rule For Device Comm.]
 > <img width="1442" height="1062" alt="image" src="https://github.com/user-attachments/assets/cce81c12-4b6b-4a00-bd11-4f1207bdd018" /> [Fig 25b - Firewall Rule Comm. b/w Ecorp & Attack LAN]
+> <img width="1438" height="1059" alt="image" src="https://github.com/user-attachments/assets/af813195-c60b-4be0-b819-366782f80264" /> [Fig 25c - Firewall Rule Three]
+> <img width="1452" height="1058" alt="image" src="https://github.com/user-attachments/assets/55590b28-1871-4396-88f9-90bab53ee50b" /> [Fig 25d - Firewall Rule Blocks Anything Prev. Unspecified]
+> <img width="1439" height="929" alt="image" src="https://github.com/user-attachments/assets/1e354184-1441-4ae8-ac7b-716c36085c5a" /> [Fig 25e - ECORP Firewall Rules]
+> <img width="1443" height="1058" alt="image" src="https://github.com/user-attachments/assets/e113c728-cb9c-4cfa-8849-43d2cf893f4c" /> [Fig 26a - AttackLAN Firewall Rule ~ Traffic from AL to ECorp]
 > 
+
+
+
 
 
 
