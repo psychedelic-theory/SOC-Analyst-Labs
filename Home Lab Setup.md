@@ -58,8 +58,6 @@ OPT1 was assigned 10.0.3.1/24 as the gatewat for the Attack LAN segment followin
 
 The webConfigurator is accessible at https://10.0.3.1/ for GUI-based firewall management and further configuration.
 
- 
-
 ### Screenshots
 > <img width="1781" height="1198" alt="image" src="https://github.com/user-attachments/assets/239c29c2-f0e9-48a7-abd1-70ce77574f39" /> [Fig 2 - pfSense Download Page]
 > <img width="1910" height="1098" alt="image" src="https://github.com/user-attachments/assets/4707bcc1-a2c0-44ec-8995-efcc190306da" /> [Fig 3a - Configuring pfSense in VirtualBox]
@@ -124,8 +122,20 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1420" height="929" alt="image" src="https://github.com/user-attachments/assets/56dd72f5-5248-4bb4-b22a-a31d67369219" /> [Fig 11 - Reload Wizard Configuration]
 > <img width="1419" height="925" alt="image" src="https://github.com/user-attachments/assets/97ffd2f7-d132-4dd7-965b-79ee2e8ab146" /> [Fig 12 - Wizard Setup Complete]
 > <img width="1418" height="926" alt="image" src="https://github.com/user-attachments/assets/dd69652f-325f-4df1-a134-a499dce400ac" /> [Fig 13 - Copyright and Trademark]
-> <img width="1430" height="902" alt="image" src="https://github.com/user-attachments/assets/abaa8ad0-67c2-4c33-94c7-0946cc07a675" /> [Fig 14 - LAN Interface]
-> 
+> <img width="1430" height="902" alt="image" src="https://github.com/user-attachments/assets/abaa8ad0-67c2-4c33-94c7-0946cc07a675" /> [Fig 14 - Ecorp LAN Interface]
+> <img width="1440" height="902" alt="image" src="https://github.com/user-attachments/assets/17162959-1230-4a32-b631-6d7bd8390349" /> [Fig 15 - Attack LAN Interface]
+> <img width="1439" height="903" alt="image" src="https://github.com/user-attachments/assets/3496b35c-1ab5-4e00-a2cd-d913345d5b72" /> [Fig 16a - DNS Resolver General Settings]
+> <img width="1436" height="899" alt="image" src="https://github.com/user-attachments/assets/16151617-cd6e-4fd4-9f14-da24a5a7c99d" /> [Fig 16b - DNS Resolver Advanced Settings]
+> <img width="1438" height="898" alt="image" src="https://github.com/user-attachments/assets/32760b64-7338-45fb-8b9b-362473998fd8" /> [Fig 17 - System/Advanced/Networking]
+> <img width="1432" height="903" alt="image" src="https://github.com/user-attachments/assets/71e707ef-9cce-4a83-b73b-55444b7e12fe" /> [Fig 18 - Reboot Hardware Checksum Setting]
+> <img width="1432" height="896" alt="image" src="https://github.com/user-attachments/assets/578ac987-0266-4ec0-97aa-0c5a8259d912" /> [Fig 19 - Reboot Page]
+
+
+
+
+
+
+
 
 
 
