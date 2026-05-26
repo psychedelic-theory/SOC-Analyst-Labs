@@ -135,7 +135,11 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1437" height="1450" alt="image" src="https://github.com/user-attachments/assets/dc9099f1-a37e-42f8-bfed-ae58f94ec95b" /> [Fig 23a - ECORP DHCP Server]
 > <img width="1432" height="1485" alt="image" src="https://github.com/user-attachments/assets/10d91049-e69f-472b-b82e-a17c359a0bf3" /> [Fig 23b - AttackLAN DHCP Server]
 > <img width="1436" height="918" alt="image" src="https://github.com/user-attachments/assets/0a28aa0d-36bc-4b29-a7ce-e152e1bfedad" /> [Fig 24a - Firewall Aliases]
+> <img width="1437" height="1061" alt="image" src="https://github.com/user-attachments/assets/8c330fab-a1fc-418d-a5f9-adbb4447aad0" /> [Fig 25a - Ecorp Firewall Rule For Device Comm.]
+> <img width="1442" height="1062" alt="image" src="https://github.com/user-attachments/assets/cce81c12-4b6b-4a00-bd11-4f1207bdd018" /> [Fig 25b - Firewall Rule Comm. b/w Ecorp & Attack LAN]
 > 
+
+
 
 # <a name="win11"></a>Installing Windows 11 VM
 
