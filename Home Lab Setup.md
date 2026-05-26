@@ -97,7 +97,7 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 ### Steps
 - [X] Access pfSense Web GUI
 - [X] Run the Setup Wizard
-- [ ] Name the interfaces
+- [X] Name the interfaces
 - [ ] Configure DNS Resolver
 - [ ] Enable Hardware Checksum Offloading
 - [ ] Assign a Static DHCP Lease to Windows 11
@@ -124,6 +124,9 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 > <img width="1420" height="929" alt="image" src="https://github.com/user-attachments/assets/56dd72f5-5248-4bb4-b22a-a31d67369219" /> [Fig 11 - Reload Wizard Configuration]
 > <img width="1419" height="925" alt="image" src="https://github.com/user-attachments/assets/97ffd2f7-d132-4dd7-965b-79ee2e8ab146" /> [Fig 12 - Wizard Setup Complete]
 > <img width="1418" height="926" alt="image" src="https://github.com/user-attachments/assets/dd69652f-325f-4df1-a134-a499dce400ac" /> [Fig 13 - Copyright and Trademark]
+> <img width="1430" height="902" alt="image" src="https://github.com/user-attachments/assets/abaa8ad0-67c2-4c33-94c7-0946cc07a675" /> [Fig 14 - LAN Interface]
+> 
+
 
 
 # <a name="win11"></a>Installing Windows 11 VM
