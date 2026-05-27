@@ -254,3 +254,6 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 ## Notes
 
 ### Screenshots
+> <img width="1415" height="1017" alt="image" src="https://github.com/user-attachments/assets/0478cd3a-5631-4f5d-b5ee-644ea51677bc" /> [Fig 1 - ISO Download]
+> <img width="1395" height="507" alt="image" src="https://github.com/user-attachments/assets/1cc4c3ed-6db8-412d-a6a3-116a8d5f4920" /> [Fig 2 - 
+
