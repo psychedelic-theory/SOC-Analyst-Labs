@@ -255,5 +255,26 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 
 ### Screenshots
 > <img width="1415" height="1017" alt="image" src="https://github.com/user-attachments/assets/0478cd3a-5631-4f5d-b5ee-644ea51677bc" /> [Fig 1 - ISO Download]
-> <img width="1395" height="507" alt="image" src="https://github.com/user-attachments/assets/1cc4c3ed-6db8-412d-a6a3-116a8d5f4920" /> [Fig 2 - 
+> <img width="1395" height="507" alt="image" src="https://github.com/user-attachments/assets/1cc4c3ed-6db8-412d-a6a3-116a8d5f4920" /> [Fig 2 - Windows Server 2025]
+> <img width="1910" height="1097" alt="image" src="https://github.com/user-attachments/assets/a0b7ebc7-e47e-4e1f-ade7-d6696e27a471" /> [Fig 3a - ECORP DC System Cofiguration]
+> <img width="1914" height="1092" alt="image" src="https://github.com/user-attachments/assets/40b27426-70f5-4038-9336-d1bd38347ac9" /> [Fig 3b - Virtual Hardware Configuration]
+> <img width="1906" height="1093" alt="image" src="https://github.com/user-attachments/assets/5eecd87f-c3d1-4df4-8d39-2dec0ed22dd5" /> [Fig 3c - Virtual Hard Disk]
+> <img width="1555" height="1129" alt="image" src="https://github.com/user-attachments/assets/09838563-cf17-42bc-86da-14c6759a2cee" /> [Fig 3d - System Settings]
+> <img width="1111" height="334" alt="image" src="https://github.com/user-attachments/assets/5b0cd6d2-9b3a-4b35-bdac-f6cef66e0852" /> [Fig 3e - Disable Audio]
+> <img width="1118" height="545" alt="image" src="https://github.com/user-attachments/assets/d3970e2e-caa0-42e0-9c01-307b1e5ee723" /> [Fig 3f - Network Settings]
+> <img width="1027" height="778" alt="image" src="https://github.com/user-attachments/assets/e15237f2-ac02-41f1-b2a2-d80bd753bae1" /> [Fig 4a - Language Selection]
+> <img width="1017" height="778" alt="image" src="https://github.com/user-attachments/assets/74de002c-9eb9-4a0f-8adf-38a4d2e49b45" /> [Fig 4b - Setup Option]
+> <img width="1021" height="773" alt="image" src="https://github.com/user-attachments/assets/08e79256-8485-4082-94c2-82df5fea1560" /> [Fig 4c - Image Selection]
+> <img width="1023" height="769" alt="image" src="https://github.com/user-attachments/assets/a6c8dc21-c6a9-4909-92ca-539e72080694" /> [Fig 4d - Accept Terms & Conditions]
+> <img width="1021" height="769" alt="image" src="https://github.com/user-attachments/assets/cf4a0d87-5707-4381-bec6-45048b7d3f24" /> [Fig 4e - Windows Server Allocation]
+> <img width="1022" height="773" alt="image" src="https://github.com/user-attachments/assets/7575150c-f8d7-4759-b4b4-266dba0ae5e1" /> [Fig 4f - Install Windows Server]
+
+
+
+
+
+
+
+
+
 
