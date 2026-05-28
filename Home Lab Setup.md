@@ -15,8 +15,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Configure pfSense Part 2](#pfSense2) | Complete |
 | [Install Windows 11 VM](#win11) | Complete |
 | [Download & Configure Kali Linux VM](#kali) | Complete |
-| [Install Windows Server](#wser) | In Progress |
-| Install & Configure Active Directory | Not Started |
+| [Install Windows Server](#wser) | Complete |
+| [Install & Configure Active Directory](#active) | In Progress |
 | Manage Users, Groups & Policies | Not Started |
 | Domain Joining | Not Started |
 | Install Sysmon | Not Started |
@@ -264,6 +264,15 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 
 ### Notes
 
+#### Loggin in Requires Ctrl+Alt+Del Passthrough
+Windows Server locks the screen and requires Ctrl+Alt+Del to unlock. In VirtualBox, pressing Ctrl+Alt+Del directly affects the host machine instead. To send it to the VM, go to **Input → Keyboard → Insert Ctrl-Alt-Del** from the VirtualBox menu bar.
+
+#### Verify IP Is in the Correct Range
+After first boot, open a Command Prompt and run `ipconfig` to confirm the server received an IP in the `10.0.1.x` range from pfSense's ECorp DHCP pool. If it shows something outside that range, check that the VM's network adapter is attached to the correct Internal Network (`LAN0`).
+
+#### Assigning a Static IP via pfSense
+Rather than configuring a static IP inside Windows, the static assignment is handled through pfSense's DHCP static mapping. Log into pfSense at `https://10.0.1.1`, navigate to **Status → DHCP Leases**, find the server's MAC address, and click the **+** icon to create a static mapping. Assign it `10.0.1.3`. After saving and applying changes, run `ipconfig /release` followed by `ipconfig /renew` in the server's Command Prompt to pick up the new address.
+
 ### Screenshots
 > <img width="1415" height="1017" alt="image" src="https://github.com/user-attachments/assets/0478cd3a-5631-4f5d-b5ee-644ea51677bc" /> [Fig 1 - ISO Download]
 > <img width="1395" height="507" alt="image" src="https://github.com/user-attachments/assets/1cc4c3ed-6db8-412d-a6a3-116a8d5f4920" /> [Fig 2 - Windows Server 2025]
@@ -295,8 +304,12 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 > <img width="1388" height="1258" alt="image" src="https://github.com/user-attachments/assets/b1380b26-09a0-4cbe-9a7f-967d1f3d9be9" /> [Fig 18 - Static IP Configuration]
 > <img width="1112" height="834" alt="image" src="https://github.com/user-attachments/assets/4cd094a2-b98f-412d-870f-e6bb1549a586" /> [Fig 19 - Command Network Check]
 
+# <a name="active"></a>Install & Configure Active Directory
 
+### Overview
 
+### Steps
 
+### Notes
 
-
+### Screenshots
