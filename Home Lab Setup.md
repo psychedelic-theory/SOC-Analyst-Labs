@@ -283,6 +283,20 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 > <img width="1023" height="771" alt="image" src="https://github.com/user-attachments/assets/d89e0130-b5d9-4621-8710-cb02139d68aa" /> [Fig 5 - Setup Admin Credentials]
 > <img width="1019" height="768" alt="image" src="https://github.com/user-attachments/assets/8af7d9d3-89d6-4ac8-adc9-c0dbf03fe93b" /> [Fig 6 - Sign In]
 > <img width="1024" height="766" alt="image" src="https://github.com/user-attachments/assets/ce883447-21f2-4a9d-8755-5da015c84157" /> [Fig 7 - Windows Server Dashboard]
+> <img width="1024" height="767" alt="image" src="https://github.com/user-attachments/assets/7b8e7571-4ba0-4c91-b84f-58b0b19cebfa" /> [Fig 8 - Insert Guest Additions]
+> <img width="1026" height="772" alt="image" src="https://github.com/user-attachments/assets/725321f8-d854-4f4e-8df1-8d91abac6edd" /> [Fig 9 - VBox Guest Additions]
+> <img width="1028" height="772" alt="image" src="https://github.com/user-attachments/assets/f96946d0-2c08-49bb-ba88-beb1422f725a" /> [Fig 10 - Ran As Administrator]
+> <img width="1025" height="770" alt="image" src="https://github.com/user-attachments/assets/d1b425b4-2b90-4b4f-b542-5c8b9c17e97d" /> [Fig 11 - Install Location]
+> <img width="1022" height="767" alt="image" src="https://github.com/user-attachments/assets/64ef839c-16d5-4f64-bee1-4c4cd3f60a32" /> [Fig 12 - Choose Components]
+> <img width="1020" height="769" alt="image" src="https://github.com/user-attachments/assets/1a93e4a7-8faa-4613-b801-5f3c24c4fffc" /> [Fig 13 - Installing G. Additions]
+> <img width="1180" height="898" alt="image" src="https://github.com/user-attachments/assets/c7ae6c84-8787-40ae-b4d9-d117b202fa1b" /> [Fig 14 - Reboot]
+
+
+
+
+
+
+
 
 
 
