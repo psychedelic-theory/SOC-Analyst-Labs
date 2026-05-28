@@ -36,20 +36,20 @@ pfsense acts as the firewall and router for the lab network, segmenting traffic 
 - [x] Configure WAN and LAN interfaces
 - [X] Set up DHCP for the lab network
 
-## Notes
-### Paravirtualized Connectivity Issue
+### Notes
+#### Paravirtualized Connectivity Issue
  During the pfSense installation in Virtualbox I encountered the VM hanging or failing to detect network interfaces. This failure typically surfaced during the install or after the first boot, with interfaces failling to initialize or assign properly. [Fig 8] The issue was having the network adapter type set to Paravirtualized Network (virtio). 
  
  Paravirtualized adapter generally are preferred because they have a higher performance by bypassing emulation overhead, allowing the guest OS to communicate directly with the hypervisor, lower CPU usage, and better throughput. The combination of VirtualBox, FreeBSD/pfSense introduces instability because the virtio driver stability is dependent on the kernel version in use and a history of Oracle VM VirtualBOX occasional virtio regressions and compatibility inconsistencies with BSD guests. 
  
  To remedy the issue, I changed the adatper type to Intel PRO/1000 MT Desktop for each interface. The tradeoff was for stability over performance. 
- ### WAN Adapter Atachment Issue
+ #### WAN Adapter Atachment Issue
  I encountered another warning stating that the installer could not reach the Netgate servers during the installation process. The lab was designed to mimic a realistic enterprise environment with pfSense acting as the central firewall and router between three network segments (WAN, LAN 0, & Lan 1). 
 
  The WAN adapter (Fig 5) was configured as a Bridged Adapter connected to the host machine's Intel WI-FI 7 BE201 wireleess NIC. This introduced a ccommon VirtualBox limitation where bridged networking over a wireless adapter is inherently unreliable. Wi-Fi NICs operate at Layer 2 in a way that most home routers and wireless access points cannot or do not support. Home routers for example typically will not forward traffic destined for a MAC address that differs from the registered host machine. With out pfSense machine having its own unique MAC address, the router silently dropped/ignored the traffic. 
 
  To resolve the issue, we switched Adapter 1 (Fig 16) from Bridged Adapter to NAT, because NAT does not require selecting a specific host NIC. This allows pfSense to reach the internet without needing to interact with the home router directly, completly bypassing the Wi-Fi bridging limitation.
-### WAN & LAN Configuration
+#### WAN & LAN Configuration
 The WAN interface (em0) received a DHCP lease of 10.0.2.15/24 from VirutalBox's NAT engine, confirming that the earlier adapter change from Bridge to NAT was successful. pfSense now has reliable outbound internet access routed through the host machine without depending on Wi-Fi bridging.
 
 The Lan interface was assigned 10.0.1.1/24, serving as the default gateway for the ECorp network segment. The /24 subnet provides 254 usable addresses (10.0.1.1 - 10.0.1.254), with pfSense holding .1 as the gateway. The remaining address space is deliberately left available to accomodate future static IP assignments for infrastructure such as domain controllers, file servers, SIEM nodes, or any additional lab machines that require a fixed, predictable address.
@@ -106,24 +106,24 @@ By the end of this section, pfSense is fully configured as the segmented firewal
 - [X] Verify Connectivity (Optional)
 - [X] Reboot pfSense
 
-## Notes
-### Setup Wizard
+### Notes
+#### Setup Wizard
 Unchecking "Override DNS" on the General Information screen matters because leaving it enabled would allow DHCP/PPP on the WAN to override the DNS settings you configure, which can cause inconsistent name resolution behavior across the lab.
 
 Unchecking "Block RFC1918 Private Networks" on the WAN interface VirtualBox NAT, the WAN-side IP is itself a private address ('10.0.2.15'). Leaving this option checked would cause pfSense to silently drop its own upstream traffic, breaking internet access entirely. this is a common point of confusion when running pfSense in a virtualized environment rather than on physical hardware where the WAN would normally face a public IP.
 
-### DNS Resolver Configuration
+#### DNS Resolver Configuration
 Enabling DHCP Registration and Static DHCP in the DNS Resolver ensures that machines on the network can resolve each other by hostname rather than just IP address. This becomes important later when domain joining and Active Directory are introduced - hostname resolution needs to be reliabnle before those components will function properly. 
 
 Enabling Prefetch Support and Prefetch DNS Key Support in the Advanced Settings keeps DNS performant by refreshing cache entries before they expire and reducing DNSSEC validation latency. These are small optimizations, but they reflect good practice for a lab simulating an enterprise environment.
 
-### Hardware Checksum Offloading
+#### Hardware Checksum Offloading
 Disabling hardware checksum offloading under `System → Advanced → Networking` is a VirtualBox-specific requirement. VirtualBox's virtual NICs do not reliably handle checksum offloading, which can cause packet corruption or intermittent connectivity failures that are difficult to diagnose. The symptoms can look like a firewall or routing issue when the real cause is at a much lower level. Disabling it forces checksums to be calculated in software, which is slower in theory but far more stable in this environment. This is a known quirk of running pfSense under VirtualBox and worth documenting to avoid chasing phantom network issues later.
 
-## Firewall Alias (RFC1918) 
+#### Firewall Alias (RFC1918) 
 Creating an alias that groups the three private IPv4 ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) into a single named object called `RFC1918` is a small step that significantly improves firewall rule readability. Rather than writing three separate destination entries every time a rule needs to reference private address space, a single alias reference handles it. This is standard practice in production firewall management and keeps the rule base clean and maintainable as the lab grows.
 
-## General Observations
+#### General Observations
  
 A few patterns worth carrying forward from this section:
  
@@ -183,7 +183,7 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 - [x] Complete initial Windows setup
 - [ ] Join Domain
 
-## Screenshots
+### Screenshots
 > <img width="1400" height="483" alt="image" src="https://github.com/user-attachments/assets/cd8855d5-00cc-4834-a36c-4756ebcbdca4" /> [Fig 1 - Download Win11 ISO]
 > <img width="2124" height="737" alt="image" src="https://github.com/user-attachments/assets/857c22f4-54a9-4f22-897e-d83886c17bf6" /> [Fig 2a - Win11 VM OS Setup]
 > <img width="2120" height="647" alt="image" src="https://github.com/user-attachments/assets/71d3931c-9d22-4e61-93fe-fc7d1c7c6730" /> [Fig 2b - Win11 Virtual Hardware Setup]
@@ -226,11 +226,11 @@ Downloading and importing the pre-built Kali Linux VM into VirtualBox and config
 - [X] Verify Network Assignment with 'ip a'
 - [X] Verify Internet Connectivity with 'ping 8.8.8.8'
 
-## Notes
-### VM Image over Installer Image
+### Notes
+#### VM Image over Installer Image
 Select Virtual Machines and then choose VirtualBox as your hypervisor. The pre-built VM image skips the full OS installation process and drops you directly into a configured Kali environment, which is the faster path for lab purposes. 
 
-### Default Credentials
+#### Default Credentials
 Kali's pre-built VM ships with default credentials: username kali, password kali. You will be prompted at the login screen immediately on boot. It is good practice to change these once the VM is up, especially in a lab that simulates a real enterprise network. 
 
 ### Screenshots
@@ -248,10 +248,22 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 # <a name="wser"></a> Installing Windows Server
 
 ### Overview
+This section covers installing Windows Server 2025 in VirtualBox, which will later be promoted to a Domain Controller (DC-1) for the ECorp network segment. The server is placed on the ECorp LAN (10.0.1.x), assigned a static IP via pfSense, and configured with VirtualBox Guest Additions for improved usability.
 
 ### Steps
+- [x] Download Windows Server 2025 ISO from Microsoft Evaluation Center
+- [x] Create Windows Server VM in VirtualBox
+- [x] Configure VM system and network settings
+- [x] Install Windows Server 2025 (Desktop Experience)
+- [ ] Create Administrator password and log in
+- [ ] Verify DHCP lease and confirm correct IP range
+- [ ] Assign static IP (10.0.1.3) via pfSense DHCP static mapping
+- [ ] Install VirtualBox Guest Additions
+- [ ] Enable bidirectional clipboard between host and VM
+- [ ] Configure as Domain Controller (covered in Active Directory section)
 
-## Notes
+
+### Notes
 
 ### Screenshots
 > <img width="1415" height="1017" alt="image" src="https://github.com/user-attachments/assets/0478cd3a-5631-4f5d-b5ee-644ea51677bc" /> [Fig 1 - ISO Download]
