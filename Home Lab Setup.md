@@ -181,7 +181,6 @@ Installation and configuration of a Windows 11 virtual machine to serve as a wor
 - [x] Create Windows 11 VM in VirtualBox
 - [x] Configure network adapter to LAN 0
 - [x] Complete initial Windows setup
-- [ ] Join Domain
 
 ### Screenshots
 > <img width="1400" height="483" alt="image" src="https://github.com/user-attachments/assets/cd8855d5-00cc-4834-a36c-4756ebcbdca4" /> [Fig 1 - Download Win11 ISO]
@@ -243,6 +242,8 @@ Kali's pre-built VM ships with default credentials: username kali, password kali
 > <img width="1123" height="427" alt="image" src="https://github.com/user-attachments/assets/5dc8657a-0f8d-4151-b36f-34b346d7f5b1" /> [Fig 7 - Bidirectional Clipping]
 > <img width="1286" height="962" alt="image" src="https://github.com/user-attachments/assets/2be69eb2-a0e8-42f5-8c40-a34c66a899a3" /> [Fig 8 - Kali Homepage]
 > <img width="648" height="518" alt="image" src="https://github.com/user-attachments/assets/25fe415d-eb44-42f5-898f-2c1037aaac1f" /> [Fig 9 - Connectivity Test]
+> <img width="1391" height="734" alt="image" src="https://github.com/user-attachments/assets/60247c15-4afc-458c-89b0-b42a1f27779f" /> [Fig 10 - DHCP Lease Static IP]
+
 
 
 # <a name="wser"></a> Installing Windows Server
@@ -258,9 +259,8 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 - [X] Create Administrator password and log in
 - [X] Install VirtualBox Guest Additions
 - [X] Verify DHCP lease and confirm correct IP range
-- [ ] Assign static IP (10.0.1.3) via pfSense DHCP static mapping
-- [ ] Enable bidirectional clipboard between host and VM
-- [ ] Configure as Domain Controller (covered in Active Directory section)
+- [X] Assign static IP (10.0.1.3) via pfSense DHCP static mapping
+- [X] Enable bidirectional clipboard between host and VM
 
 ### Notes
 
@@ -292,24 +292,8 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 > <img width="1108" height="630" alt="image" src="https://github.com/user-attachments/assets/14b68bcb-a1ce-41e8-bb6e-4f0ea9d33f93" /> [Fig 15 - Network Check]
 > <img width="1391" height="836" alt="image" src="https://github.com/user-attachments/assets/23cedb54-b639-4cf8-aa74-10d48c9ce8a9" /> [Fig 16 - pfSense Dashboard]
 > <img width="1385" height="731" alt="image" src="https://github.com/user-attachments/assets/61cb8d57-32d4-454e-b9ec-f2cba2733c3d" /> [Fig 17 - DHCP Leases]
-> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> <img width="1388" height="1258" alt="image" src="https://github.com/user-attachments/assets/b1380b26-09a0-4cbe-9a7f-967d1f3d9be9" /> [Fig 18 - Static IP Configuration]
+> <img width="1112" height="834" alt="image" src="https://github.com/user-attachments/assets/4cd094a2-b98f-412d-870f-e6bb1549a586" /> [Fig 19 - Command Network Check]
 
 
 
