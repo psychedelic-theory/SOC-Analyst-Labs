@@ -307,9 +307,50 @@ Rather than configuring a static IP inside Windows, the static assignment is han
 # <a name="active"></a>Install & Configure Active Directory
 
 ### Overview
+This section covers promoting the Windows Server 2025 VM to a fully functioning Domain Controller for the ECorp network segment. The process involves renaming the server, installing the Active Directory Domain Services (AD DS) role, creating a new forest with the root domain `ECorp.local`, configuring Certificate Services (AD CS) to establish a Certification Authority, and setting a static IP directly on the server's network adapter. By the end of this section, the server operates as `ECorp-DC` — the authoritative domain controller for the lab environment — with a PKI infrastructure in place for future certificate-based authentication scenarios.
 
 ### Steps
+**Install Active Directory**
+- [ ] Rename the server to `ECorp-DC` via System > About > Rename this PC and restart
+- [ ] After restart, open Server Manager > Manage > Add Roles and Features
+- [ ] Select Role-based or feature-based installation and click Next
+- [ ] Select the destination server from the server pool and click Next
+- [ ] Select **Active Directory Domain Services**, click Add Features, then click Next through Features and AD DS info screens
+- [ ] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
+- [ ] After installation completes, click **Promote this server to a domain controller**
+- [ ] Select **Add a new forest** and enter `ECorp.local` as the root domain name, then click Next
+- [ ] Set a DSRM password on the Domain Controller Options screen and click Next
+- [ ] Click Next through DNS Options (ignore the delegation warning)
+- [ ] Wait for the NetBIOS domain name (`ECORP`) to auto-populate on the Additional Options screen, then click Next
+- [ ] Click Next through Paths and Review Options screens
+- [ ] After the prerequisites check passes, click Install — the server will restart automatically
+- [ ] Sign back in as `ECORP\Administrator`
 
+**Configure Certificate Services**
+- [ ] Go to Manage > Add Roles and Features
+- [ ] Click Next through Before You Begin, Installation Type, and Server Selection screens
+- [ ] Select **Active Directory Certificate Services**, click Add Features, then click Next
+- [ ] Click Next through Features and AD CS info screens
+- [ ] Select **Certification Authority** as the role service, then click Next
+- [ ] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
+- [ ] After installation, click **Configure Active Directory Certificate Services on the destination server**
+- [ ] Click Next on the Credentials screen (ECORP\Administrator is pre-filled)
+- [ ] Check **Certification Authority** as the role service to configure, then click Next
+- [ ] Select **Enterprise CA**, click Next
+- [ ] Select **Root CA**, click Next
+- [ ] Select **Create a new private key**, click Next
+- [ ] Keep the default SHA256 cryptography settings and click Next
+- [ ] Keep the default CA name and click Next
+- [ ] Keep the default validity period and click Next
+- [ ] Keep the default certificate database locations and click Next
+- [ ] Click **Configure** on the Confirmation screen
+- [ ] Confirm "Configuration succeeded" and reboot the server
+
+**Set Network Connections**
+- [ ] Right-click the network icon in the system tray and open **Network & Internet settings**
+- [ ] Select **Ethernet > Edit IP Assignment**
+- [ ] Switch to **Manual**, enable IPv4, and enter: IP `10.0.1.3`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `8.8.8.8`
+- [ ] Save and verify with `ipconfig /all` in Command Prompt
 ### Notes
 
 ### Screenshots
