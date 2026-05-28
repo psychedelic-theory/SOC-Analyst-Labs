@@ -256,12 +256,11 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 - [x] Configure VM system and network settings
 - [x] Install Windows Server 2025 (Desktop Experience)
 - [X] Create Administrator password and log in
-- [ ] Verify DHCP lease and confirm correct IP range
+- [X] Install VirtualBox Guest Additions
+- [X] Verify DHCP lease and confirm correct IP range
 - [ ] Assign static IP (10.0.1.3) via pfSense DHCP static mapping
-- [ ] Install VirtualBox Guest Additions
 - [ ] Enable bidirectional clipboard between host and VM
 - [ ] Configure as Domain Controller (covered in Active Directory section)
-
 
 ### Notes
 
@@ -290,6 +289,13 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 > <img width="1022" height="767" alt="image" src="https://github.com/user-attachments/assets/64ef839c-16d5-4f64-bee1-4c4cd3f60a32" /> [Fig 12 - Choose Components]
 > <img width="1020" height="769" alt="image" src="https://github.com/user-attachments/assets/1a93e4a7-8faa-4613-b801-5f3c24c4fffc" /> [Fig 13 - Installing G. Additions]
 > <img width="1180" height="898" alt="image" src="https://github.com/user-attachments/assets/c7ae6c84-8787-40ae-b4d9-d117b202fa1b" /> [Fig 14 - Reboot]
+> <img width="1108" height="630" alt="image" src="https://github.com/user-attachments/assets/14b68bcb-a1ce-41e8-bb6e-4f0ea9d33f93" /> [Fig 15 - Network Check]
+> <img width="1391" height="836" alt="image" src="https://github.com/user-attachments/assets/23cedb54-b639-4cf8-aa74-10d48c9ce8a9" /> [Fig 16 - pfSense Dashboard]
+> <img width="1385" height="731" alt="image" src="https://github.com/user-attachments/assets/61cb8d57-32d4-454e-b9ec-f2cba2733c3d" /> [Fig 17 - DHCP Leases]
+> 
+
+
+
 
 
 
