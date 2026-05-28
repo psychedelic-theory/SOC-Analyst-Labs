@@ -255,7 +255,7 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 - [x] Create Windows Server VM in VirtualBox
 - [x] Configure VM system and network settings
 - [x] Install Windows Server 2025 (Desktop Experience)
-- [ ] Create Administrator password and log in
+- [X] Create Administrator password and log in
 - [ ] Verify DHCP lease and confirm correct IP range
 - [ ] Assign static IP (10.0.1.3) via pfSense DHCP static mapping
 - [ ] Install VirtualBox Guest Additions
@@ -280,6 +280,12 @@ This section covers installing Windows Server 2025 in VirtualBox, which will lat
 > <img width="1023" height="769" alt="image" src="https://github.com/user-attachments/assets/a6c8dc21-c6a9-4909-92ca-539e72080694" /> [Fig 4d - Accept Terms & Conditions]
 > <img width="1021" height="769" alt="image" src="https://github.com/user-attachments/assets/cf4a0d87-5707-4381-bec6-45048b7d3f24" /> [Fig 4e - Windows Server Allocation]
 > <img width="1022" height="773" alt="image" src="https://github.com/user-attachments/assets/7575150c-f8d7-4759-b4b4-266dba0ae5e1" /> [Fig 4f - Install Windows Server]
+> <img width="1023" height="771" alt="image" src="https://github.com/user-attachments/assets/d89e0130-b5d9-4621-8710-cb02139d68aa" /> [Fig 5 - Setup Admin Credentials]
+> <img width="1019" height="768" alt="image" src="https://github.com/user-attachments/assets/8af7d9d3-89d6-4ac8-adc9-c0dbf03fe93b" /> [Fig 6 - Sign In]
+> <img width="1024" height="766" alt="image" src="https://github.com/user-attachments/assets/ce883447-21f2-4a9d-8755-5da015c84157" /> [Fig 7 - Windows Server Dashboard]
+
+
+
 
 
 
