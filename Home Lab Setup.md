@@ -316,41 +316,41 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 - [X] Select Role-based or feature-based installation and click Next
 - [X] Select the destination server from the server pool and click Next
 - [X] Select **Active Directory Domain Services**, click Add Features, then click Next through Features and AD DS info screens
-- [ ] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
-- [ ] After installation completes, click **Promote this server to a domain controller**
-- [ ] Select **Add a new forest** and enter `ECorp.local` as the root domain name, then click Next
-- [ ] Set a DSRM password on the Domain Controller Options screen and click Next
-- [ ] Click Next through DNS Options (ignore the delegation warning)
-- [ ] Wait for the NetBIOS domain name (`ECORP`) to auto-populate on the Additional Options screen, then click Next
-- [ ] Click Next through Paths and Review Options screens
-- [ ] After the prerequisites check passes, click Install — the server will restart automatically
-- [ ] Sign back in as `ECORP\Administrator`
+- [X] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
+- [X] After installation completes, click **Promote this server to a domain controller**
+- [X] Select **Add a new forest** and enter `ECorp.local` as the root domain name, then click Next
+- [X] Set a DSRM password on the Domain Controller Options screen and click Next
+- [X] Click Next through DNS Options (ignore the delegation warning)
+- [X] Wait for the NetBIOS domain name (`ECORP`) to auto-populate on the Additional Options screen, then click Next
+- [X] Click Next through Paths and Review Options screens
+- [X] After the prerequisites check passes, click Install — the server will restart automatically
+- [X] Sign back in as `ECORP\Administrator`
 
 **Configure Certificate Services**
-- [ ] Go to Manage > Add Roles and Features
-- [ ] Click Next through Before You Begin, Installation Type, and Server Selection screens
-- [ ] Select **Active Directory Certificate Services**, click Add Features, then click Next
-- [ ] Click Next through Features and AD CS info screens
-- [ ] Select **Certification Authority** as the role service, then click Next
-- [ ] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
-- [ ] After installation, click **Configure Active Directory Certificate Services on the destination server**
-- [ ] Click Next on the Credentials screen (ECORP\Administrator is pre-filled)
-- [ ] Check **Certification Authority** as the role service to configure, then click Next
-- [ ] Select **Enterprise CA**, click Next
-- [ ] Select **Root CA**, click Next
-- [ ] Select **Create a new private key**, click Next
-- [ ] Keep the default SHA256 cryptography settings and click Next
-- [ ] Keep the default CA name and click Next
-- [ ] Keep the default validity period and click Next
-- [ ] Keep the default certificate database locations and click Next
-- [ ] Click **Configure** on the Confirmation screen
-- [ ] Confirm "Configuration succeeded" and reboot the server
+- [X] Go to Manage > Add Roles and Features
+- [X] Click Next through Before You Begin, Installation Type, and Server Selection screens
+- [X] Select **Active Directory Certificate Services**, click Add Features, then click Next
+- [X] Click Next through Features and AD CS info screens
+- [X] Select **Certification Authority** as the role service, then click Next
+- [X] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
+- [X] After installation, click **Configure Active Directory Certificate Services on the destination server**
+- [X] Click Next on the Credentials screen (ECORP\Administrator is pre-filled)
+- [X] Check **Certification Authority** as the role service to configure, then click Next
+- [X] Select **Enterprise CA**, click Next
+- [X] Select **Root CA**, click Next
+- [X] Select **Create a new private key**, click Next
+- [X] Keep the default SHA256 cryptography settings and click Next
+- [X] Keep the default CA name and click Next
+- [X] Keep the default validity period and click Next
+- [X] Keep the default certificate database locations and click Next
+- [X] Click **Configure** on the Confirmation screen
+- [X] Confirm "Configuration succeeded" and reboot the server
 
 **Set Network Connections**
-- [ ] Right-click the network icon in the system tray and open **Network & Internet settings**
-- [ ] Select **Ethernet > Edit IP Assignment**
-- [ ] Switch to **Manual**, enable IPv4, and enter: IP `10.0.1.3`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `8.8.8.8`
-- [ ] Save and verify with `ipconfig /all` in Command Prompt
+- [X] Right-click the network icon in the system tray and open **Network & Internet settings**
+- [X] Select **Ethernet > Edit IP Assignment**
+- [X] Switch to **Manual**, enable IPv4, and enter: IP `10.0.1.3`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `8.8.8.8`
+- [X] Save and verify with `ipconfig /all` in Command Prompt
 
 ### Notes
 
@@ -367,7 +367,33 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 > <img width="1435" height="799" alt="image" src="https://github.com/user-attachments/assets/ef36fbf6-9d86-4840-a4c5-bd3ac8ce75e3" /> [Fig 8 - Domain Controller/Installation Progress]
 > <img width="1437" height="800" alt="image" src="https://github.com/user-attachments/assets/b53d561b-e471-4a8c-88e8-6c970907e183" /> [Fig 9 - Deployment Configuration 'New Forest']
 > <img width="1432" height="804" alt="image" src="https://github.com/user-attachments/assets/d3e2de0d-b1d3-4cc6-8db0-73a21d5b8c7c" /> [Fig 10 - Directory Services Restore Mode (DSRM) Password Setup]
-
-
-
-
+> <img width="1435" height="808" alt="image" src="https://github.com/user-attachments/assets/b008eb9c-b9b4-40d5-bdde-78280d0b4c02" /> [Fig 11 - DNS Options]
+> <img width="1436" height="806" alt="image" src="https://github.com/user-attachments/assets/b97cbc7f-e11c-4c98-be22-a52526e72307" /> [Fig 12 - NetBIOS Domain Name]
+> <img width="1435" height="800" alt="image" src="https://github.com/user-attachments/assets/5d76c7d8-76b7-457c-9a5d-5e0f051f979a" /> [Fig 13 - AD DS database, log files, and SYSVOL Paths]
+> <img width="1432" height="802" alt="image" src="https://github.com/user-attachments/assets/881663aa-ee7a-41ff-a28f-536ebd66e885" /> [Fig 14 - Review Options]
+> <img width="1428" height="802" alt="image" src="https://github.com/user-attachments/assets/1f3047b6-ed7e-48d8-a661-0234b0de28c8" /> [Fig 15 - Prerequisite Checks]
+> <img width="1430" height="802" alt="image" src="https://github.com/user-attachments/assets/58c9e0b8-c789-4112-824d-b34c0a51c71a" /> [Fig 16 - System Restart]
+> <img width="1433" height="807" alt="image" src="https://github.com/user-attachments/assets/fb53f459-1932-4c72-9855-0e009da41021" /> [Fig 17 - Role-Based Install #2]
+> <img width="1438" height="808" alt="image" src="https://github.com/user-attachments/assets/a632aa5b-c1b4-4f02-8455-ba99e3c9692a" /> [Fig 18 - Server Dest. #2]
+> <img width="1435" height="806" alt="image" src="https://github.com/user-attachments/assets/90b9d9ce-e133-4198-8d47-fb146f40ed95" /> [Fig 19 - Active Directory Certificate Services Role]
+> <img width="1430" height="805" alt="image" src="https://github.com/user-attachments/assets/e0ce6709-45d1-4a96-a7ca-309f0a294c08" /> [Fig 20 - Add AD CSR features]
+> <img width="1439" height="805" alt="image" src="https://github.com/user-attachments/assets/1521564a-194e-4702-88f8-b4c5da27e96d" /> [Fig 21 - Select Features]
+> <img width="1432" height="802" alt="image" src="https://github.com/user-attachments/assets/ec0dec47-0dfc-4fd2-ad16-a793f5747f62" /> [Fig 22 - AD Certificate Services Info]
+> <img width="1438" height="802" alt="image" src="https://github.com/user-attachments/assets/0a45df83-7919-472d-a15b-f2f2594d9eaf" /> [Fig 23 - Select Role Services]
+> <img width="1437" height="810" alt="image" src="https://github.com/user-attachments/assets/badf4444-1d63-42c0-9892-c0c5e72afe60" /> [Fig 24 - Confirm Installation]
+> <img width="1437" height="803" alt="image" src="https://github.com/user-attachments/assets/b602c719-c618-4a4a-bb01-261791f0ffea" /> [Fig 25 - Configure AD Cert. Services]
+> <img width="1437" height="796" alt="image" src="https://github.com/user-attachments/assets/7d8adfdd-085f-4096-8381-2aa20f985bba" /> [Fig 26 - Credentials]
+> <img width="1438" height="803" alt="image" src="https://github.com/user-attachments/assets/ece8a897-5620-46de-9221-c4ed0e638c01" /> [Fig 27 - Certificate Authority]
+> <img width="1437" height="808" alt="image" src="https://github.com/user-attachments/assets/56d3485c-5692-4d33-adf9-6ffd3ea1786e" /> [Fig 28 - Enterprise CA]
+> <img width="1432" height="806" alt="image" src="https://github.com/user-attachments/assets/6f99e016-f04c-4544-a6e1-3242840e996d" /> [Fig 29 - Root CA]
+> <img width="1434" height="810" alt="image" src="https://github.com/user-attachments/assets/9ff26c51-65dd-4124-a313-30e32e077b2d" /> [Fig 30a - Private Key]
+> <img width="1438" height="803" alt="image" src="https://github.com/user-attachments/assets/30bb7e60-b73b-47fd-8ce4-556cbc4caa9e" /> [Fig 30b - Cryptography for CA]
+> <img width="1433" height="807" alt="image" src="https://github.com/user-attachments/assets/a8de097a-6759-490c-8581-e6ea6ac2accb" /> [Fig 30c - CA Name]
+> <img width="1434" height="808" alt="image" src="https://github.com/user-attachments/assets/620aea59-8b55-44ac-83e1-df59a1afaf22" /> [Fig 30d - Validity Period]
+> <img width="1435" height="801" alt="image" src="https://github.com/user-attachments/assets/4025acae-af5c-44bf-8a53-46b5bfb97cd0" /> [Fig 31 - CA Database]
+> <img width="1440" height="805" alt="image" src="https://github.com/user-attachments/assets/6f9a7140-27fa-403a-a96b-17c99d059cf6" /> [Fig 32 - Confirmation]
+> <img width="1430" height="808" alt="image" src="https://github.com/user-attachments/assets/1cbebe7b-57cf-4e0b-9c97-3293b6d96472" /> [Fig 33 - AD CS Configuration Success]
+> <img width="804" height="631" alt="image" src="https://github.com/user-attachments/assets/27336273-1483-4b16-9bb8-ff8e3ca9a715" /> [Fig 34 - Network & Internet Settings]
+> <img width="803" height="631" alt="image" src="https://github.com/user-attachments/assets/c40e741f-8ff9-4d67-9957-f3b598831e5a" /> [Fig 35 - Ethernet Settings]
+> <img width="491" height="752" alt="image" src="https://github.com/user-attachments/assets/34732244-1b8a-45d6-81d4-2b52cdd035de" /> [Fig 36 - IPv4 IP Assignment]
+> <img width="1109" height="595" alt="image" src="https://github.com/user-attachments/assets/fd483f97-f8e0-48ad-a790-4fec00c9b2f5" /> [Fig 37 - Network Config. Check]
