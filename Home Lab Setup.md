@@ -351,6 +351,9 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 - [ ] Select **Ethernet > Edit IP Assignment**
 - [ ] Switch to **Manual**, enable IPv4, and enter: IP `10.0.1.3`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `8.8.8.8`
 - [ ] Save and verify with `ipconfig /all` in Command Prompt
+
 ### Notes
 
 ### Screenshots
+> <img width="1201" height="931" alt="image" src="https://github.com/user-attachments/assets/00da7686-e4d5-4eae-bfd4-92212a12ff65" /> [Fig 1 - Rename PC]
+> 
