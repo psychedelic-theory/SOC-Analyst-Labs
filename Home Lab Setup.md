@@ -16,8 +16,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Install Windows 11 VM](#win11) | Complete |
 | [Download & Configure Kali Linux VM](#kali) | Complete |
 | [Install Windows Server](#wser) | Complete |
-| [Install & Configure Active Directory](#active) | In Progress |
-| Manage Users, Groups & Policies | Not Started |
+| [Install & Configure Active Directory](#active) | Complete |
+| [Manage Users, Groups & Policies](#mugp) | In Progress |
 | Domain Joining | Not Started |
 | Install Sysmon | Not Started |
 | Install & Configure Splunk | Not Started |
@@ -354,6 +354,24 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 
 ### Notes
 
+#### Rename Before Prompting
+Renaming the server before running the AD DS promotion wizard is important because the server name becomes embedded in the domain controller metadata, certificate common names, and DNS records during promotion. Changing the name after the fact requires additional steps to update AD objects and SPN registrations, and in some cases causes errors that are difficult to trace. `ECorp-DC` is descriptive and follows a naming convention that scales cleanly when additional domain controllers or member servers are added later.
+
+#### The DNS Delegation Warning Is Expected
+During the AD DS promotion wizard, the DNS Options screen displays a yellow warning stating that a delegation for the DNS server cannot be created because the authoritative parent zone cannot be found. This is normal in a lab environment where `ECorp.local` is a private domain with no upstream DNS authority. The warning can be safely ignored — DNS will function correctly within the internal network, and pfSense's DNS Resolver handles name resolution for the lab segments.
+
+#### Why Enterprise CA Over Standalone
+The setup type selection during AD CS configuration matters. An Enterprise CA integrates directly with Active Directory, allowing it to automatically issue certificates to domain members via Group Policy and store certificate templates in AD. A Standalone CA has no AD integration and requires all certificate requests to be handled manually. For a lab simulating an enterprise environment, Enterprise CA is the correct choice — it enables certificate auto-enrollment and supports scenarios like 802.1x, smart card auth, and LDAPS down the line.
+
+#### Root CA vs. Subordinate CA
+Selecting Root CA is appropriate here because there is no existing PKI hierarchy in the lab. A Subordinate CA would require a parent CA above it to sign its certificate — which doesn't exist in this environment. The Root CA is self-signed and sits at the top of the trust chain. In a production environment, the Root CA would typically be kept offline, with one or more Subordinate CAs handling day-to-day issuance, but for lab purposes a single Root CA is sufficient.
+
+#### Static IP Set on the Adapter, Not via pfSense
+Unlike the earlier static IP assignment for this server (which was handled through pfSense's DHCP static mapping), this step sets the IP directly on the server's network adapter via Windows network settings. Once a machine is a domain controller, it should have a static IP configured at the OS level rather than relying on DHCP — even a DHCP reservation — because AD, DNS, and Kerberos all expect the DC's IP to be stable and independently authoritative. The settings used are IP `10.0.1.3`, subnet `255.255.255.0`, gateway `10.0.1.1`, and preferred DNS `8.8.8.8`.
+
+#### Verify with ipconfig /all
+Running `ipconfig /all` after saving the static IP confirms the adapter picked up the correct address without needing a full reboot. The output should show `ECorp-DC` as the hostname, `Ecorp.local` as the primary DNS suffix, `10.0.1.3` as the IPv4 address, `10.0.1.1` as the default gateway, and `8.8.8.8` as the DNS server — all consistent with the ECorp LAN segment design.
+
 ### Screenshots
 > <img width="1201" height="931" alt="image" src="https://github.com/user-attachments/assets/00da7686-e4d5-4eae-bfd4-92212a12ff65" /> [Fig 1 - Rename PC]
 > <img width="1435" height="814" alt="image" src="https://github.com/user-attachments/assets/f4674c14-e040-4b39-b073-89ebecf51d2a" /> [Fig 2 - Add Roles & Features]
@@ -397,3 +415,13 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 > <img width="803" height="631" alt="image" src="https://github.com/user-attachments/assets/c40e741f-8ff9-4d67-9957-f3b598831e5a" /> [Fig 35 - Ethernet Settings]
 > <img width="491" height="752" alt="image" src="https://github.com/user-attachments/assets/34732244-1b8a-45d6-81d4-2b52cdd035de" /> [Fig 36 - IPv4 IP Assignment]
 > <img width="1109" height="595" alt="image" src="https://github.com/user-attachments/assets/fd483f97-f8e0-48ad-a790-4fec00c9b2f5" /> [Fig 37 - Network Config. Check]
+
+# <a name="mugp"></a>Manage Users, Groups, & Policies
+
+### Overview
+
+### Steps
+
+### Notes
+
+### Screenshots
