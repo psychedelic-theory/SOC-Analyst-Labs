@@ -311,11 +311,11 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 
 ### Steps
 **Install Active Directory**
-- [ ] Rename the server to `ECorp-DC` via System > About > Rename this PC and restart
-- [ ] After restart, open Server Manager > Manage > Add Roles and Features
-- [ ] Select Role-based or feature-based installation and click Next
-- [ ] Select the destination server from the server pool and click Next
-- [ ] Select **Active Directory Domain Services**, click Add Features, then click Next through Features and AD DS info screens
+- [X] Rename the server to `ECorp-DC` via System > About > Rename this PC and restart
+- [X] After restart, open Server Manager > Manage > Add Roles and Features
+- [X] Select Role-based or feature-based installation and click Next
+- [X] Select the destination server from the server pool and click Next
+- [X] Select **Active Directory Domain Services**, click Add Features, then click Next through Features and AD DS info screens
 - [ ] Check **Restart the destination server automatically if required**, confirm Yes, then click Install
 - [ ] After installation completes, click **Promote this server to a domain controller**
 - [ ] Select **Add a new forest** and enter `ECorp.local` as the root domain name, then click Next
@@ -356,4 +356,18 @@ This section covers promoting the Windows Server 2025 VM to a fully functioning 
 
 ### Screenshots
 > <img width="1201" height="931" alt="image" src="https://github.com/user-attachments/assets/00da7686-e4d5-4eae-bfd4-92212a12ff65" /> [Fig 1 - Rename PC]
-> 
+> <img width="1435" height="814" alt="image" src="https://github.com/user-attachments/assets/f4674c14-e040-4b39-b073-89ebecf51d2a" /> [Fig 2 - Add Roles & Features]
+> <img width="1436" height="802" alt="image" src="https://github.com/user-attachments/assets/1e731543-e937-4aa9-be5f-ed1ccaf6b78c" /> [Fig 3 - Role-Based Installation]
+> <img width="1432" height="808" alt="image" src="https://github.com/user-attachments/assets/b91d0475-aad1-4b0f-b784-fe81e16524b3" /> [Fig 4 - Destination Server]
+> <img width="1433" height="800" alt="image" src="https://github.com/user-attachments/assets/6ed26ad6-843e-455b-9bb5-67abebf1a376" /> [Fig 5a - Server Role Selection]
+> <img width="1438" height="805" alt="image" src="https://github.com/user-attachments/assets/055280d6-645d-47e1-8f4d-7bfcc63ccdb1" /> [Fig 5b - Active Directory Domain Service Role]
+> <img width="1430" height="811" alt="image" src="https://github.com/user-attachments/assets/a1878ff7-da5c-4c1c-be2d-98c750ace4c8" /> [Fig 5c - Select Features List]
+> <img width="1436" height="803" alt="image" src="https://github.com/user-attachments/assets/fea6ea87-77d5-4ab7-95af-2c200f894639" /> [Fig 6 - Active Directory Domain Services]
+> <img width="1429" height="804" alt="image" src="https://github.com/user-attachments/assets/2ee7b272-c0ec-41a4-89f8-03a6bd6b3275" /> [Fig 7 - Confirm Installation & Restart]
+> <img width="1435" height="799" alt="image" src="https://github.com/user-attachments/assets/ef36fbf6-9d86-4840-a4c5-bd3ac8ce75e3" /> [Fig 8 - Domain Controller/Installation Progress]
+> <img width="1437" height="800" alt="image" src="https://github.com/user-attachments/assets/b53d561b-e471-4a8c-88e8-6c970907e183" /> [Fig 9 - Deployment Configuration 'New Forest']
+> <img width="1432" height="804" alt="image" src="https://github.com/user-attachments/assets/d3e2de0d-b1d3-4cc6-8db0-73a21d5b8c7c" /> [Fig 10 - Directory Services Restore Mode (DSRM) Password Setup]
+
+
+
+
