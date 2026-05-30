@@ -419,8 +419,21 @@ Running `ipconfig /all` after saving the static IP confirms the adapter picked u
 # <a name="mugp"></a>Manage Users, Groups, & Policies
 
 ### Overview
+This section covers organizing and populating the ECorp Active Directory environment with a realistic user and group structure. Using Active Directory Users and Computers, you will separate users and groups into dedicated Organizational Units, create domain administrator accounts, add standard user accounts, configure a service account with an intentionally weak password (for future attack simulation), set up a file share, register a Service Principal Name (SPN) for the SQL service account, and configure a domain-wide Group Policy Object (GPO) to disable Windows Defender across the domain. By the end of this section, ECorp.local reflects the kind of populated, misconfigured environment a SOC analyst would realistically encounter and investigate.
 
 ### Steps
+- [ ] Open Active Directory Users and Computers from Server Manager → Tools
+- [ ] Create a "Groups" Organizational Unit under ECorp.local
+- [ ] Move all default security groups from Users into the Groups OU
+- [ ] Copy the Administrator account to create a named domain admin user
+- [ ] Copy Administrator again to create an SQL Service account with a weak password stored in the Description field
+- [ ] Create additional standard user accounts
+- [ ] Set up a file share via File and Storage Services → Shares → New Share
+- [ ] Register an SPN for the SQL Service account using `setspn`
+- [ ] Verify the SPN registration with `setspn -T ECORP.local -Q */*`
+- [ ] Open Group Policy Management and create a new GPO linked to ECorp.local named "Disable Windows Defender"
+- [ ] Edit the GPO: Computer Configuration → Policies → Administrative Templates → Windows Components → Microsoft Defender Antivirus → Turn off Microsoft Defender Antivirus → Enabled
+- [ ] Set the GPO link to Enforced
 
 ### Notes
 
