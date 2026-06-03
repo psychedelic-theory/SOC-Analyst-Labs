@@ -438,3 +438,43 @@ This section covers organizing and populating the ECorp Active Directory environ
 ### Notes
 
 ### Screenshots
+> <img width="1435" height="856" alt="image" src="https://github.com/user-attachments/assets/a90e4fbd-92b8-448d-833b-69bd7530a73d" /> [Fig 1 - Active Directory Users and Computers]
+> <img width="1439" height="858" alt="image" src="https://github.com/user-attachments/assets/b9bb6dfc-57f8-47f9-99cc-5b7e1ad7aa2c" /> [Fig 2 - Ecorp.local Users]
+> <img width="1436" height="861" alt="image" src="https://github.com/user-attachments/assets/752a37d8-0640-4b54-b6b3-ec49ba1ee43c" /> [Fig 3 - New Organizational Unit]
+> <img width="1435" height="858" alt="image" src="https://github.com/user-attachments/assets/3cf04de8-2706-4162-aeb2-373b2c6ab26a" /> [Fig 4 - Groups Unit]
+> <img width="1434" height="854" alt="image" src="https://github.com/user-attachments/assets/987465ce-268d-44f6-a404-b77db70e543c" /> [Fig 5 - Move Users to Groups]
+> <img width="1437" height="856" alt="image" src="https://github.com/user-attachments/assets/e2745a6d-e1db-4ab7-85d8-3d1db19892f2" /> [Fig 6a - Copy Administrator]
+> <img width="1434" height="856" alt="image" src="https://github.com/user-attachments/assets/fb4d37b7-9092-4bfd-b96e-270147916afa" /> [Fig 6b - Create New Administrator]
+> <img width="1432" height="851" alt="image" src="https://github.com/user-attachments/assets/680a79cc-a8c5-465e-822a-f4b3f8fb661f" /> [Fig 6c - Set Administrator Password]
+> <img width="1438" height="860" alt="image" src="https://github.com/user-attachments/assets/1d0be3f0-b83f-4b84-bb44-758b65c10593" /> [Fig 6d - Finish Account]
+> <img width="1435" height="855" alt="image" src="https://github.com/user-attachments/assets/f439350a-b92c-456b-baa5-7b24381969dc" /> [Fig 7a - SQL Administrator]
+> <img width="1437" height="859" alt="image" src="https://github.com/user-attachments/assets/f64d02e6-dacb-4d61-be15-e6e191ade798" /> [Fig 7b - Password Creation]
+> <img width="1435" height="865" alt="image" src="https://github.com/user-attachments/assets/741cbce5-311a-4339-9f5f-c8f40a2736f3" /> [Fig 7c - Finished SQL Admin Setup]
+> <img width="1435" height="855" alt="image" src="https://github.com/user-attachments/assets/5d475acb-1dbe-4878-a1a1-db14c2db661c" /> [Fig 7d - SQLService Properties]
+> <img width="1433" height="901" alt="image" src="https://github.com/user-attachments/assets/3a5a00bf-8306-44ef-9afc-d8eda2ebf776" /> [Fig 8a - New User]
+> <img width="1440" height="859" alt="image" src="https://github.com/user-attachments/assets/2076e8d2-dae9-4a99-abc6-cc24de3674c4" /> [Fig 8b - Phillip Price User]
+> <img width="1429" height="855" alt="image" src="https://github.com/user-attachments/assets/243d2988-3eeb-4eee-9f3c-2c2491ae952f" /> [Fig 8c - Price Password]
+> <img width="1432" height="854" alt="image" src="https://github.com/user-attachments/assets/512380c7-8b58-4640-99c4-57eb4f265b42" /> [Fig 8d - Price Finished]
+> <img width="1438" height="853" alt="image" src="https://github.com/user-attachments/assets/decb90d1-3a0f-4c01-9491-44a6a870e325" /> [Fig 9a - tcolby New User]
+> <img width="1435" height="853" alt="image" src="https://github.com/user-attachments/assets/c31c7c71-e731-45b2-a2e1-664790a22169" /> [Fig 9b - tcolby password]
+> <img width="1433" height="762" alt="image" src="https://github.com/user-attachments/assets/b1843338-529b-433a-a92e-1e1a86b93336" /> [Fig 9c - tcolby Finished]
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
