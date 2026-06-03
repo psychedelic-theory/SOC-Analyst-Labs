@@ -17,8 +17,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Download & Configure Kali Linux VM](#kali) | Complete |
 | [Install Windows Server](#wser) | Complete |
 | [Install & Configure Active Directory](#active) | Complete |
-| [Manage Users, Groups & Policies](#mugp) | In Progress |
-| Domain Joining | Not Started |
+| [Manage Users, Groups & Policies](#mugp) | Complete |
+| [Domain Joining](#domainj) | In Progress |
 | Install Sysmon | Not Started |
 | Install & Configure Splunk | Not Started |
 
@@ -436,6 +436,23 @@ This section covers organizing and populating the ECorp Active Directory environ
 - [X] Set the GPO link to Enforced
 
 ### Notes
+#### Separating Users and Groups Into OUs
+By default, Active Directory places both user accounts and security groups inside the built-in Users container. Creating a dedicated "Groups" Organizational Unit and dragging all security groups into it keeps the directory readable and mirrors how mature enterprise environments structure their AD. When prompted with a warning about moving objects potentially affecting group policy application, confirm Yes — the groups being moved are security groups, not OUs with policy links, so there is no functional impact.
+
+#### Copying Administrator to Create Named Admin Accounts
+Rather than creating domain administrator accounts from scratch, copying the built-in Administrator account automatically inherits its group memberships — including Domain Admins. This is the fastest way to provision a named admin account with full domain privileges. Be sure to note the password, as there is no recovery prompt after creation.
+
+#### The SQL Service Account Is Intentionally Misconfigured
+The SQL Service account is created with a non-expiring password and has that password stored in plaintext in the account's Description field. This is a deliberate misconfiguration that mirrors a common real-world finding. It sets up a future attack scenario where an attacker with basic domain user access can read the Description field and obtain valid service account credentials. This is not sound practice, and the lab documentation calls this out explicitly.
+
+#### SPN Registration and Kerberoasting Setup
+Running `setspn -a ECorp/SQLService.ECORP.local:60111 ECORP\SQLService` registers the SQL Service account as a Kerberos service principal. Any domain user can then request a Kerberos service ticket for that SPN, which is encrypted with the service account's password hash — the foundation of a Kerberoasting attack. You can confirm the registration succeeded by running `setspn -T ECORP.local -Q */*` and locating the SQLService entry in the output.
+
+#### Disabling Windows Defender via GPO
+The "Disable Windows Defender" GPO is linked at the domain level, meaning it applies to all computers in ECorp.local. Setting the link to Enforced prevents any child OU-level policy from overriding it. This is another deliberate misconfiguration: in a real environment, disabling AV domain-wide is a significant security gap. In the lab, it prevents Defender from interfering with attack tools and payloads used in later exercises.
+
+#### Apply Changes Is Not Optional
+As noted in the pfSense configuration section, saving a policy change is not the same as applying it. After editing the GPO, confirm the settings are saved before closing the editor. On domain-joined endpoints, run `gpupdate /force` to push the policy immediately rather than waiting for the default refresh interval.
 
 ### Screenshots
 > <img width="1435" height="856" alt="image" src="https://github.com/user-attachments/assets/a90e4fbd-92b8-448d-833b-69bd7530a73d" /> [Fig 1 - Active Directory Users and Computers]
@@ -470,21 +487,16 @@ This section covers organizing and populating the ECorp Active Directory environ
 > <img width="939" height="323" alt="image" src="https://github.com/user-attachments/assets/39e5c4f2-b323-4f03-872a-2882e8161282" /> [Fig 12a - Windows Powershell #1]
 > <img width="941" height="626" alt="image" src="https://github.com/user-attachments/assets/9d4e3c42-5f0e-4125-b7cb-e9debf9c0a7e" /> [Fig 12b - Windows Powershell #2]
 > <img width="956" height="806" alt="image" src="https://github.com/user-attachments/assets/d10301ac-98c8-41bc-8cf0-67a646b16586" /> [Fig 13a - Group Policy Management]
+> <img width="749" height="530" alt="image" src="https://github.com/user-attachments/assets/6110bdeb-4a7d-4061-8c7a-bed94d04d356" /> [Fig 13b - Creating a GPO]
+> <img width="752" height="529" alt="image" src="https://github.com/user-attachments/assets/a1c0781d-f63b-401a-8b53-50479ff334e2" /> [Fig 13c - Disable Windows Defender]
+> <img width="757" height="528" alt="image" src="https://github.com/user-attachments/assets/030d7483-9fbc-4f3f-9375-f5bcb34931af" /> [Fig 13d - GPO Message]
+> <img width="751" height="563" alt="image" src="https://github.com/user-attachments/assets/872e048a-bc42-4e56-a3a7-071e638f9265" /> [Fig 13e - Edit Policy]
+> <img width="787" height="561" alt="image" src="https://github.com/user-attachments/assets/1257143e-89ac-41cb-ab0f-8d7621a7ba6c" /> [Fig 13f - Windows Components]
+> <img width="827" height="562" alt="image" src="https://github.com/user-attachments/assets/093eb29f-b7a7-44ef-8b63-2c5571eed89d" /> [Fig 13g - Turn Off Microsoft Defender Antivirus]
+> <img width="686" height="636" alt="image" src="https://github.com/user-attachments/assets/6f5a4bba-412b-4d45-a70b-8a1cb31b2857" /> [Fig 13h - Microsoft Defender Antivirus Settings]
+> <img width="756" height="566" alt="image" src="https://github.com/user-attachments/assets/034c07a9-3ad7-47d7-9994-04addc3333cb" /> [Fig 13i - Set GPO to Enforced]
 
-
-
-
-
-
-
-
-
-
-
- 
-
- 
-
+# <a name="domainj"></a>Domain Joining
 
 
 
