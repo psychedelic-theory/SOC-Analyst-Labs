@@ -428,12 +428,12 @@ This section covers organizing and populating the ECorp Active Directory environ
 - [X] Copy the Administrator account to create a named domain admin user
 - [X] Copy Administrator again to create an SQL Service account with a weak password stored in the Description field
 - [X] Create additional standard user accounts
-- [ ] Set up a file share via File and Storage Services → Shares → New Share
-- [ ] Register an SPN for the SQL Service account using `setspn`
-- [ ] Verify the SPN registration with `setspn -T ECORP.local -Q */*`
-- [ ] Open Group Policy Management and create a new GPO linked to ECorp.local named "Disable Windows Defender"
-- [ ] Edit the GPO: Computer Configuration → Policies → Administrative Templates → Windows Components → Microsoft Defender Antivirus → Turn off Microsoft Defender Antivirus → Enabled
-- [ ] Set the GPO link to Enforced
+- [X] Set up a file share via File and Storage Services → Shares → New Share
+- [X] Register an SPN for the SQL Service account using `setspn`
+- [X] Verify the SPN registration with `setspn -T ECORP.local -Q */*`
+- [X] Open Group Policy Management and create a new GPO linked to ECorp.local named "Disable Windows Defender"
+- [X] Edit the GPO: Computer Configuration → Policies → Administrative Templates → Windows Components → Microsoft Defender Antivirus → Turn off Microsoft Defender Antivirus → Enabled
+- [X] Set the GPO link to Enforced
 
 ### Notes
 
@@ -458,7 +458,18 @@ This section covers organizing and populating the ECorp Active Directory environ
 > <img width="1438" height="853" alt="image" src="https://github.com/user-attachments/assets/decb90d1-3a0f-4c01-9491-44a6a870e325" /> [Fig 9a - tcolby New User]
 > <img width="1435" height="853" alt="image" src="https://github.com/user-attachments/assets/c31c7c71-e731-45b2-a2e1-664790a22169" /> [Fig 9b - tcolby password]
 > <img width="1433" height="762" alt="image" src="https://github.com/user-attachments/assets/b1843338-529b-433a-a92e-1e1a86b93336" /> [Fig 9c - tcolby Finished]
-> 
+> <img width="960" height="421" alt="image" src="https://github.com/user-attachments/assets/b53bf964-ef30-408d-aef9-a8c4c6fdea7a" /> [Fig 10 - File and Storage Devices]
+> <img width="959" height="427" alt="image" src="https://github.com/user-attachments/assets/7ae99692-d53e-499a-a362-cb7b9fa4ba20" /> [Fig 11a - New Share]
+> <img width="959" height="580" alt="image" src="https://github.com/user-attachments/assets/90e5249a-7e64-4d8c-ba55-d9a48d870e2f" /> [Fig 11b - File Share Profile]
+> <img width="958" height="577" alt="image" src="https://github.com/user-attachments/assets/4cfe0a74-542d-4639-9d18-04e07a16e91f" /> [Fig 11c - Share Location]
+> <img width="959" height="570" alt="image" src="https://github.com/user-attachments/assets/7163954b-b593-48cb-b719-50b354ed1b51" /> [Fig 11d - Share Name]
+> <img width="960" height="577" alt="image" src="https://github.com/user-attachments/assets/bd86f7e6-2686-45a0-9362-b02b5dcb368a" /> [Fig 11e - Other Settings]
+> <img width="960" height="579" alt="image" src="https://github.com/user-attachments/assets/a504cff0-dbec-4511-b402-3c803cf5c895" /> [Fig 11f - Permissions]
+> <img width="959" height="571" alt="image" src="https://github.com/user-attachments/assets/558aa8f0-3d94-443a-8042-fee93a1ed171" /> [Fig 11g - Confirmation]
+> <img width="958" height="574" alt="image" src="https://github.com/user-attachments/assets/8a30a064-2ea4-44cb-a6e2-1f132ec81c7c" /> [Fig 11h - Results]
+> <img width="939" height="323" alt="image" src="https://github.com/user-attachments/assets/39e5c4f2-b323-4f03-872a-2882e8161282" /> [Fig 12a - Windows Powershell #1]
+> <img width="941" height="626" alt="image" src="https://github.com/user-attachments/assets/9d4e3c42-5f0e-4125-b7cb-e9debf9c0a7e" /> [Fig 12b - Windows Powershell #2]
+> <img width="956" height="806" alt="image" src="https://github.com/user-attachments/assets/d10301ac-98c8-41bc-8cf0-67a646b16586" /> [Fig 13a - Group Policy Management]
 
 
 
@@ -470,7 +481,7 @@ This section covers organizing and populating the ECorp Active Directory environ
 
 
 
-
+ 
 
  
 
