@@ -498,6 +498,27 @@ As noted in the pfSense configuration section, saving a policy change is not the
 
 # <a name="domainj"></a>Domain Joining
 
+### Overview
+This section covers joining the Windows 11 VM to the ECorp.local domain created in the previous section. Before joining, the workstation's network adapter is reconfigured with a static IP and pointed to the Domain Controller's IP as its DNS server — a required step since Windows must be able to resolve the domain name through AD's DNS to complete the join. Once the static IP is set, the machine is joined through the Access Work or School settings, authenticated against the domain controller, and verified in Active Directory Users and Computers on the DC.
+
+### Steps
+- [ ] Right-click the network icon in the system tray and open **Network & Internet settings**
+- [ ] Select **Ethernet**, then click **Edit** next to IP assignment
+- [ ] Change IP settings to **Manual** and configure IPv4: IP `10.0.1.2`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `10.0.1.3`
+- [ ] Save the settings
+- [ ] Open the Start Menu search bar, type `Domain`, and select **Access work or school**
+- [ ] Click **Connect**
+- [ ] Select **Join this device to a local Active Directory domain**
+- [ ] Enter `ECorp.local` as the domain name and click **Next**
+- [ ] Authenticate with the domain Administrator credentials and click **OK**
+- [ ] Set the account type to **Administrator** and click **Next**
+- [ ] Click **Restart now** to reboot the machine and complete the join
+- [ ] On the Domain Controller, open **Server Manager → Tools → Active Directory Users and Computers**
+- [ ] Expand `ECorp.local`, select **Computers**, and verify the Windows 11 VM appears
+
+### Notes
+
+### Screenshots
 
 
 
