@@ -563,6 +563,18 @@ Sysmon (System Monitor) is a Windows system service and device driver that remai
 ### Notes
 
 ### Screenshots
+> <img width="1014" height="830" alt="image" src="https://github.com/user-attachments/assets/25c5d7cd-7969-4c58-aaeb-d010b2ba0e64" /> [Fig 1 - Sysmon Download]
+> <img width="1012" height="782" alt="image" src="https://github.com/user-attachments/assets/b89b9512-8dc4-45c8-87c6-a9330a3bcc4b" /> [Fig 2 - Sysmon Repo]
+> <img width="1010" height="785" alt="image" src="https://github.com/user-attachments/assets/d219da8a-15b1-4aaa-ad51-92092c9ad4a0" /> [Fig 3 - Sysmon Config]
+> <img width="1015" height="787" alt="image" src="https://github.com/user-attachments/assets/6e4463c9-d21e-4ee2-8304-77c5624c9202" /> [Fig 4 - Configuration File]
+> <img width="1011" height="781" alt="image" src="https://github.com/user-attachments/assets/0ec12b5e-9cb8-4cad-bbea-815227e929d5" /> [Fig 5 - File Extraction]
+> <img width="1009" height="779" alt="image" src="https://github.com/user-attachments/assets/e5ac4fd0-07dd-464c-9eeb-940c2d163c4c" /> [Fig 6 - Sysmon64]
+> 
+
+
+
+
+
 
 
 
