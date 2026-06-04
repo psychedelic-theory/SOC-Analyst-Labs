@@ -18,8 +18,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Install Windows Server](#wser) | Complete |
 | [Install & Configure Active Directory](#active) | Complete |
 | [Manage Users, Groups & Policies](#mugp) | Complete |
-| [Domain Joining](#domainj) | In Progress |
-| Install Sysmon | Not Started |
+| [Domain Joining](#domainj) | Complete |
+| [Install Sysmon](#sysmon) | In Progress |
 | Install & Configure Splunk | Not Started |
 
 ## Lab Network Diagram
@@ -543,7 +543,26 @@ After the workstation reboots, always confirm the join from the DC side by check
 > <img width="959" height="898" alt="image" src="https://github.com/user-attachments/assets/25f66347-a009-4684-a16b-b6bc157c317a" /> [Fig 9 - Active Directory]
 > <img width="956" height="894" alt="image" src="https://github.com/user-attachments/assets/e4b079b3-a37f-4972-a763-c1002659b02c" /> [Fig 10 - Computers]
 
+# <a name="sysmon"></a>Install Sysmon
 
+### Overview
+Sysmon (System Monitor) is a Windows system service and device driver that remains resident across reboots to monitor and log system activity to the Windows Event Log. It provides granular telemetry on process creations, network connections, file creation time changes, and more — data that is critical for threat detection and log analysis in a SOC environment. This section covers installing Sysmon on the Windows 11 VM using the sysmon-modular configuration as a baseline, and verifying that events are being captured in Event Viewer.
+
+### Steps
+- [ ] Download Sysmon from Microsoft Sysinternals
+- [ ] Download the sysmon-modular `sysmonconfig.xml` configuration file from GitHub
+- [ ] Copy the config XML text and save it as `sysmonconfig.xml` in Notepad
+- [ ] Unzip the Sysmon archive
+- [ ] Move `Sysmon64.exe` to the Downloads folder alongside `sysmonconfig.xml`
+- [ ] Open Command Prompt as Administrator and navigate to the Downloads folder
+- [ ] Run `sysmon64.exe -accepteula -i sysmonconfig.xml` to install
+- [ ] Open Event Viewer as Administrator using Domain Admin credentials
+- [ ] Navigate to Applications and Service Logs → Microsoft → Windows → Sysmon → Operational
+- [ ] Confirm Sysmon events are being logged
+
+### Notes
+
+### Screenshots
 
 
 
