@@ -502,23 +502,55 @@ As noted in the pfSense configuration section, saving a policy change is not the
 This section covers joining the Windows 11 VM to the ECorp.local domain created in the previous section. Before joining, the workstation's network adapter is reconfigured with a static IP and pointed to the Domain Controller's IP as its DNS server — a required step since Windows must be able to resolve the domain name through AD's DNS to complete the join. Once the static IP is set, the machine is joined through the Access Work or School settings, authenticated against the domain controller, and verified in Active Directory Users and Computers on the DC.
 
 ### Steps
-- [ ] Right-click the network icon in the system tray and open **Network & Internet settings**
-- [ ] Select **Ethernet**, then click **Edit** next to IP assignment
-- [ ] Change IP settings to **Manual** and configure IPv4: IP `10.0.1.2`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `10.0.1.3`
-- [ ] Save the settings
-- [ ] Open the Start Menu search bar, type `Domain`, and select **Access work or school**
-- [ ] Click **Connect**
-- [ ] Select **Join this device to a local Active Directory domain**
-- [ ] Enter `ECorp.local` as the domain name and click **Next**
-- [ ] Authenticate with the domain Administrator credentials and click **OK**
-- [ ] Set the account type to **Administrator** and click **Next**
-- [ ] Click **Restart now** to reboot the machine and complete the join
-- [ ] On the Domain Controller, open **Server Manager → Tools → Active Directory Users and Computers**
-- [ ] Expand `ECorp.local`, select **Computers**, and verify the Windows 11 VM appears
+- [X] Right-click the network icon in the system tray and open **Network & Internet settings**
+- [X] Select **Ethernet**, then click **Edit** next to IP assignment
+- [X] Change IP settings to **Manual** and configure IPv4: IP `10.0.1.2`, Subnet `255.255.255.0`, Gateway `10.0.1.1`, Preferred DNS `10.0.1.3`
+- [X] Save the settings
+- [X] Open the Start Menu search bar, type `Domain`, and select **Access work or school**
+- [X] Click **Connect**
+- [X] Select **Join this device to a local Active Directory domain**
+- [X] Enter `ECorp.local` as the domain name and click **Next**
+- [X] Authenticate with the domain Administrator credentials and click **OK**
+- [X] Set the account type to **Administrator** and click **Next**
+- [X] Click **Restart now** to reboot the machine and complete the join
+- [X] On the Domain Controller, open **Server Manager → Tools → Active Directory Users and Computers**
+- [X] Expand `ECorp.local`, select **Computers**, and verify the Windows 11 VM appears
 
 ### Notes
+#### DNS Must Point to the Domain Controller
+Before attempting to join the domain, the workstation's DNS server must be set to the Domain Controller's IP (`10.0.1.3`). Windows resolves `ECorp.local` through DNS during the join process — if DNS is pointing to an external server like `8.8.8.8`, the name lookup will fail and the domain join will error out. Setting the preferred DNS to the DC ensures that SRV records for Kerberos and LDAP are resolvable, which are required for the join to succeed.
+
+#### Static IP on the Workstation
+While the Windows 11 VM previously received its IP via DHCP (or through pfSense's static mapping), the domain join process is a good point to harden the network configuration. Assigning `10.0.1.2` statically at the OS level keeps the workstation's address stable and consistent with the lab's IP scheme, mirroring the same approach taken on the Domain Controller.
+
+#### Join via Access Work or School, Not System Properties
+Windows 11 removed the traditional **System Properties → Change** domain join path from easy access. The equivalent workflow is through **Settings → Accounts → Access work or school → Connect → Join this device to a local Active Directory domain**. The result is identical — the machine is joined at the OS level — but the navigation differs from older Windows versions.
+
+#### Verify on the Domain Controller
+After the workstation reboots, always confirm the join from the DC side by checking **Active Directory Users and Computers → ECorp.local → Computers**. The machine object appearing there confirms the join was recorded in AD and that the workstation is a recognized member of the domain. Checking only from the workstation side can miss cases where the join appeared to succeed locally but did not register properly in AD.
 
 ### Screenshots
+> <img width="1010" height="753" alt="image" src="https://github.com/user-attachments/assets/21b1c72f-52c5-4ca8-a0af-2cb93928b792" /> [Fig 1 - Network & Internet Settings]
+> <img width="1013" height="708" alt="image" src="https://github.com/user-attachments/assets/97182ee0-a127-4ad1-9f80-87c8c5866133" /> [Fig 2 - IP Assignment]
+> <img width="1011" height="709" alt="image" src="https://github.com/user-attachments/assets/c76653dc-5e92-4017-bcc9-209c0eb6c7e7" /> [Fig 3 - Edit IP Settings]
+> <img width="1011" height="752" alt="image" src="https://github.com/user-attachments/assets/c407ac23-2439-425f-b627-88e9e3cf4b52" /> [Fig 4 - Domain]
+> <img width="1006" height="710" alt="image" src="https://github.com/user-attachments/assets/1c334de5-4e31-4be3-9f8a-7259b1317113" /> [Fig 5 - Connect Work Account]
+> <img width="1014" height="709" alt="image" src="https://github.com/user-attachments/assets/9ce3d5f8-2754-4d2c-9e51-ab3e83919e7e" /> [Fig 6 - Join to Active Directory Domain]
+> <img width="1010" height="710" alt="image" src="https://github.com/user-attachments/assets/6d95f719-9feb-4849-8146-5b18acae4293" /> [Fig 7a - Join The Domain]
+> <img width="1009" height="709" alt="image" src="https://github.com/user-attachments/assets/3bc3de4f-1a23-4d44-8daa-7c05065edef3" /> [Fig 7b - Domain Account]
+> <img width="1011" height="706" alt="image" src="https://github.com/user-attachments/assets/176e6e09-c14d-476e-8255-18d4e9d046e6" /> [Fig 7c - Add an account]
+> <img width="1011" height="704" alt="image" src="https://github.com/user-attachments/assets/6194e40b-0037-41d2-ac32-6083311a3e61" /> [Fig 8 - Restart PC]
+> <img width="959" height="898" alt="image" src="https://github.com/user-attachments/assets/25f66347-a009-4684-a16b-b6bc157c317a" /> [Fig 9 - Active Directory]
+> <img width="956" height="894" alt="image" src="https://github.com/user-attachments/assets/e4b079b3-a37f-4972-a763-c1002659b02c" /> [Fig 10 - Computers]
+
+
+
+
+
+
+
+
+
 
 
 
