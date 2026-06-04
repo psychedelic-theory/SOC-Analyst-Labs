@@ -16,8 +16,8 @@ To develop and demonstrate practical, job-ready skills as a SOC Analyst through 
 
 | Skill | Associated Project |
 |---|---|
-| Home Lab Setup | [In Progress](#) |
-| SIEM Log Ingestion & Alerting | [Lab Coming Soon](#) |
+| Home Lab Setup | [In Progress](Home%20Lab%20Setup.md) |
+|  |  |
 
 ---
 
