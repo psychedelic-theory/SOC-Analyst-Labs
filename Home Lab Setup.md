@@ -589,8 +589,32 @@ A successful installation can be confirmed by navigating to **Applications and S
 # <a name="splunk"></a>Install & Configure Splunk
 
 ### Overview
+This section covers installing Splunk Enterprise on the Windows 11 VM and configuring it to ingest endpoint telemetry from the ECorp network segment. Because the free Splunk license caps daily data ingestion at 500 MB, Splunk is installed on the Windows 11 VM only, and log collection is kept **disabled** until a test is actively being run — then disabled again immediately after to avoid hitting the limit. Once Splunk is running, two add-ons are installed from Splunkbase (the Sysmon Add-on and the Microsoft Windows Add-on) to give Splunk the field extractions needed to parse Windows and Sysmon event logs correctly. Data inputs are then configured via Remote Event Log Collections, and a quick verification search confirms that Sysmon telemetry is landing in the index.
 
 ### Steps
+**Install Splunk**
+- [ ] Sign up for a free Splunk account at [splunk.com/en_us/download/splunk-enterprise.html](https://www.splunk.com/en_us/download/splunk-enterprise.html) (a business email may be required)
+- [ ] From the Windows 11 VM, select the **Windows** tab and download the 64-bit `.msi` installer
+- [ ] Accept the Splunk terms of agreement on the download page
+- [ ] Navigate to the Downloads folder and double-click the `.msi` file to launch the installer
+- [ ] Accept the license agreement inside the installer and click **Next**
+- [ ] Set an admin username and password when prompted, then complete the installation
+- [ ] Launch Splunk Enterprise and, if it does not open automatically, navigate to `localhost:8000` in the browser
+- [ ] Log in with the credentials created during installation
+**Install Splunk Add-ons**
+- [ ] Navigate to the Sysmon Add-on on Splunkbase: [splunkbase.splunk.com/app/5709](https://splunkbase.splunk.com/app/5709)
+- [ ] Log in with your **Splunk account** (not your local Splunk instance credentials) and download the add-on
+- [ ] In Splunk, go to **Apps → Manage Apps**, then click **Install App from File**
+- [ ] Click **Upload**, navigate to the downloaded `.tgz` file, select it, and click **Upload**
+- [ ] Confirm the success pop-up ("Splunk Add-on for Sysmon has been successfully installed")
+- [ ] Return to Splunkbase, search for **"Windows"**, and select **Splunk Add-on for Microsoft Windows**
+- [ ] Download and install it using the same **Install App from File** workflow
+**Set Up Data Inputs**
+- [ ] In Splunk, go to **Settings → Data inputs** (under the Data column)
+- [ ] Select **Remote event log collections**
+- [ ] Locate the `localhost` collection and click **Enable** to begin log ingestion
+- [ ] Verify collection is working by running `ipconfig` from the Windows 11 command line
+- [ ] Open the **Search & Reporting** app in Splunk and search for `"ipconfig"` — confirm one event is returned
 
 ### Notes
 
