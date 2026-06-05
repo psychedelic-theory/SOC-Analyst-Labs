@@ -19,8 +19,8 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Install & Configure Active Directory](#active) | Complete |
 | [Manage Users, Groups & Policies](#mugp) | Complete |
 | [Domain Joining](#domainj) | Complete |
-| [Install Sysmon](#sysmon) | In Progress |
-| Install & Configure Splunk | Not Started |
+| [Install Sysmon](#sysmon) | Complete |
+| [Install & Configure Splunk](#splunk) | In Progress |
 
 ## Lab Network Diagram
 <img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig 1 - Network Topology]
@@ -549,18 +549,29 @@ After the workstation reboots, always confirm the join from the DC side by check
 Sysmon (System Monitor) is a Windows system service and device driver that remains resident across reboots to monitor and log system activity to the Windows Event Log. It provides granular telemetry on process creations, network connections, file creation time changes, and more — data that is critical for threat detection and log analysis in a SOC environment. This section covers installing Sysmon on the Windows 11 VM using the sysmon-modular configuration as a baseline, and verifying that events are being captured in Event Viewer.
 
 ### Steps
-- [ ] Download Sysmon from Microsoft Sysinternals
-- [ ] Download the sysmon-modular `sysmonconfig.xml` configuration file from GitHub
-- [ ] Copy the config XML text and save it as `sysmonconfig.xml` in Notepad
-- [ ] Unzip the Sysmon archive
-- [ ] Move `Sysmon64.exe` to the Downloads folder alongside `sysmonconfig.xml`
-- [ ] Open Command Prompt as Administrator and navigate to the Downloads folder
-- [ ] Run `sysmon64.exe -accepteula -i sysmonconfig.xml` to install
-- [ ] Open Event Viewer as Administrator using Domain Admin credentials
-- [ ] Navigate to Applications and Service Logs → Microsoft → Windows → Sysmon → Operational
-- [ ] Confirm Sysmon events are being logged
+- [X] Download Sysmon from Microsoft Sysinternals
+- [X] Download the sysmon-modular `sysmonconfig.xml` configuration file from GitHub
+- [X] Copy the config XML text and save it as `sysmonconfig.xml` in Notepad
+- [X] Unzip the Sysmon archive
+- [X] Move `Sysmon64.exe` to the Downloads folder alongside `sysmonconfig.xml`
+- [X] Open Command Prompt as Administrator and navigate to the Downloads folder
+- [X] Run `sysmon64.exe -accepteula -i sysmonconfig.xml` to install
+- [X] Open Event Viewer as Administrator using Domain Admin credentials
+- [X] Navigate to Applications and Service Logs → Microsoft → Windows → Sysmon → Operational
+- [X] Confirm Sysmon events are being logged
 
 ### Notes
+#### Why sysmon-modular
+Rather than writing a Sysmon configuration from scratch, the sysmon-modular project (maintained by olafhartong) provides a well-structured, community-vetted baseline. The default `sysmonconfig.xml` is the balanced configuration — most commonly used, covering a broad set of events without generating excessive noise. Any of these configurations should be treated as a starting point; tuning for the specific environment is strongly recommended over time.
+
+#### Saving the Config File Correctly
+When saving the configuration in Notepad, make sure to set the file type to **All Files** and name it exactly `sysmonconfig.xml`. Saving it as a `.txt` file with an `.xml` name is a common mistake — the extension must be correct for Sysmon to parse it properly.
+
+#### Install Command Breakdown
+The install command `sysmon64.exe -accepteula -i sysmonconfig.xml` does three things: `-accepteula` silently accepts the end user license agreement, `-i` specifies that this is an initial installation (as opposed to an update), and `sysmonconfig.xml` points to the configuration file. Both files must be in the same directory, or the full path to the config must be provided.
+
+#### Verifying in Event Viewer
+A successful installation can be confirmed by navigating to **Applications and Service Logs → Microsoft → Windows → Sysmon → Operational** in Event Viewer. If events are populating — process creations, registry queries, file operations — Sysmon is running and collecting telemetry correctly. Opening Event Viewer with **Run as Administrator** using Domain Admin credentials ensures full visibility into all administrative event logs.
 
 ### Screenshots
 > <img width="1014" height="830" alt="image" src="https://github.com/user-attachments/assets/25c5d7cd-7969-4c58-aaeb-d010b2ba0e64" /> [Fig 1 - Sysmon Download]
@@ -569,7 +580,23 @@ Sysmon (System Monitor) is a Windows system service and device driver that remai
 > <img width="1015" height="787" alt="image" src="https://github.com/user-attachments/assets/6e4463c9-d21e-4ee2-8304-77c5624c9202" /> [Fig 4 - Configuration File]
 > <img width="1011" height="781" alt="image" src="https://github.com/user-attachments/assets/0ec12b5e-9cb8-4cad-bbea-815227e929d5" /> [Fig 5 - File Extraction]
 > <img width="1009" height="779" alt="image" src="https://github.com/user-attachments/assets/e5ac4fd0-07dd-464c-9eeb-940c2d163c4c" /> [Fig 6 - Sysmon64]
-> 
+> <img width="457" height="604" alt="image" src="https://github.com/user-attachments/assets/4cc32281-b78d-4c71-a323-2b0e03956f8a" /> [Fig 7 - Sign In As Admin]
+> <img width="975" height="510" alt="image" src="https://github.com/user-attachments/assets/2e96cc09-0f38-4dcb-8e32-73f72cea29f0" /> [Fig 8 - Run Program]
+> <img width="770" height="721" alt="image" src="https://github.com/user-attachments/assets/1b21a2e3-c24f-43c4-8bcd-35021ccc1c66" /> [Fig 9 - Open Event Viewer]
+> <img width="1089" height="726" alt="image" src="https://github.com/user-attachments/assets/2d9c997d-5ccc-4ca1-938c-c1407896c950" /> [Fig 10 - Sysmon > Operational]
+> <img width="1084" height="718" alt="image" src="https://github.com/user-attachments/assets/cc42666c-51f7-4a78-81db-2453ed4c3ad0" /> [Fig 11 - Sysmon Logs]
+
+# <a name="splunk"></a>Install & Configure Splunk
+
+### Overview
+
+### Steps
+
+### Notes
+
+### Screenshots
+
+
 
 
 
