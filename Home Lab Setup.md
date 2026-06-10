@@ -599,8 +599,8 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 - [X] Navigate to the Downloads folder and double-click the `.msi` file to launch the installer
 - [X] Accept the license agreement inside the installer and click **Next**
 - [x] Set an admin username and password when prompted, then complete the installation
-- [ ] Launch Splunk Enterprise and, if it does not open automatically, navigate to `localhost:8000` in the browser
-- [ ] Log in with the credentials created during installation
+- [X] Launch Splunk Enterprise and, if it does not open automatically, navigate to `localhost:8000` in the browser
+- [X] Log in with the credentials created during installation
 **Install Splunk Add-ons**
 - [ ] Navigate to the Sysmon Add-on on Splunkbase: [splunkbase.splunk.com/app/5709](https://splunkbase.splunk.com/app/5709)
 - [ ] Log in with your **Splunk account** (not your local Splunk instance credentials) and download the add-on
@@ -625,25 +625,7 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 > <img width="1440" height="771" alt="image" src="https://github.com/user-attachments/assets/11fd9b68-29b3-498b-b21d-c7913a7fdb80" /> [Fig 4 - Start Installation]
 > <img width="1447" height="748" alt="image" src="https://github.com/user-attachments/assets/c7bce2b5-ff55-4dd6-8d02-87bb68955451" /> [Fig 5 - Instance User Setup]
 > <img width="1438" height="730" alt="image" src="https://github.com/user-attachments/assets/a4015fed-e3aa-4dbb-933e-b65243aebf78" /> [Fig 6 - Install Splunk]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> <img width="1436" height="746" alt="image" src="https://github.com/user-attachments/assets/643aa139-d4f0-4d88-a2ea-23b2eb56b164" /> [Fig 7 - Launch Splunk]
+> 
 
 
