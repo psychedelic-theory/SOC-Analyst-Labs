@@ -593,12 +593,12 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 
 ### Steps
 **Install Splunk**
-- [ ] Sign up for a free Splunk account at [splunk.com/en_us/download/splunk-enterprise.html](https://www.splunk.com/en_us/download/splunk-enterprise.html) (a business email may be required)
-- [ ] From the Windows 11 VM, select the **Windows** tab and download the 64-bit `.msi` installer
-- [ ] Accept the Splunk terms of agreement on the download page
-- [ ] Navigate to the Downloads folder and double-click the `.msi` file to launch the installer
-- [ ] Accept the license agreement inside the installer and click **Next**
-- [ ] Set an admin username and password when prompted, then complete the installation
+- [X] Sign up for a free Splunk account at [splunk.com/en_us/download/splunk-enterprise.html](https://www.splunk.com/en_us/download/splunk-enterprise.html) (a business email may be required)
+- [X] From the Windows 11 VM, select the **Windows** tab and download the 64-bit `.msi` installer
+- [X] Accept the Splunk terms of agreement on the download page
+- [X] Navigate to the Downloads folder and double-click the `.msi` file to launch the installer
+- [X] Accept the license agreement inside the installer and click **Next**
+- [x] Set an admin username and password when prompted, then complete the installation
 - [ ] Launch Splunk Enterprise and, if it does not open automatically, navigate to `localhost:8000` in the browser
 - [ ] Log in with the credentials created during installation
 **Install Splunk Add-ons**
@@ -619,6 +619,17 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 ### Notes
 
 ### Screenshots
+> <img width="1439" height="1285" alt="image" src="https://github.com/user-attachments/assets/65141821-e9e7-4442-aa52-054447b7168d" /> [Fig 1 - Splunk Enterprise]
+> <img width="1444" height="924" alt="image" src="https://github.com/user-attachments/assets/c96a605a-74b4-4465-9796-34eb8f5fa383" /> [Fig 2 - Download For Win. Ser. 25]
+> <img width="1441" height="1163" alt="image" src="https://github.com/user-attachments/assets/50323dff-4e34-435f-a26d-a747297f5ec2" /> [Fig 3 - Terms of Agreement]
+> <img width="1440" height="771" alt="image" src="https://github.com/user-attachments/assets/11fd9b68-29b3-498b-b21d-c7913a7fdb80" /> [Fig 4 - Start Installation]
+> <img width="1447" height="748" alt="image" src="https://github.com/user-attachments/assets/c7bce2b5-ff55-4dd6-8d02-87bb68955451" /> [Fig 5 - Instance User Setup]
+> <img width="1438" height="730" alt="image" src="https://github.com/user-attachments/assets/a4015fed-e3aa-4dbb-933e-b65243aebf78" /> [Fig 6 - Install Splunk]
+
+
+
+
+
 
 
 
