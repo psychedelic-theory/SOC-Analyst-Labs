@@ -602,21 +602,35 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 - [X] Launch Splunk Enterprise and, if it does not open automatically, navigate to `localhost:8000` in the browser
 - [X] Log in with the credentials created during installation
 **Install Splunk Add-ons**
-- [ ] Navigate to the Sysmon Add-on on Splunkbase: [splunkbase.splunk.com/app/5709](https://splunkbase.splunk.com/app/5709)
-- [ ] Log in with your **Splunk account** (not your local Splunk instance credentials) and download the add-on
-- [ ] In Splunk, go to **Apps → Manage Apps**, then click **Install App from File**
-- [ ] Click **Upload**, navigate to the downloaded `.tgz` file, select it, and click **Upload**
-- [ ] Confirm the success pop-up ("Splunk Add-on for Sysmon has been successfully installed")
-- [ ] Return to Splunkbase, search for **"Windows"**, and select **Splunk Add-on for Microsoft Windows**
-- [ ] Download and install it using the same **Install App from File** workflow
+- [X] Navigate to the Sysmon Add-on on Splunkbase: [splunkbase.splunk.com/app/5709](https://splunkbase.splunk.com/app/5709)
+- [X] Log in with your **Splunk account** (not your local Splunk instance credentials) and download the add-on
+- [X] In Splunk, go to **Apps → Manage Apps**, then click **Install App from File**
+- [X] Click **Upload**, navigate to the downloaded `.tgz` file, select it, and click **Upload**
+- [X] Confirm the success pop-up ("Splunk Add-on for Sysmon has been successfully installed")
+- [X] Return to Splunkbase, search for **"Windows"**, and select **Splunk Add-on for Microsoft Windows**
+- [X] Download and install it using the same **Install App from File** workflow
 **Set Up Data Inputs**
-- [ ] In Splunk, go to **Settings → Data inputs** (under the Data column)
-- [ ] Select **Remote event log collections**
-- [ ] Locate the `localhost` collection and click **Enable** to begin log ingestion
-- [ ] Verify collection is working by running `ipconfig` from the Windows 11 command line
-- [ ] Open the **Search & Reporting** app in Splunk and search for `"ipconfig"` — confirm one event is returned
+- [X] In Splunk, go to **Settings → Data inputs** (under the Data column)
+- [X] Select **Remote event log collections**
+- [X] Locate the `localhost` collection and click **Enable** to begin log ingestion
+- [X] Verify collection is working by running `ipconfig` from the Windows 11 command line
+- [X] Open the **Search & Reporting** app in Splunk and search for `"ipconfig"` — confirm one event is returned
 
 ### Notes
+#### Data Ingestion Strategy
+The free Splunk license allows indexing up to 500 MB per day. To avoid hitting this cap, log collection is intentionally kept disabled at rest. The workflow is: enable the event log collection input before running a test or simulated attack, run the exercise, then disable ingestion again. This approach lets the lab run sustained scenarios over time without exhausting the daily quota between sessions.
+ 
+#### Two Add-ons Are Required
+Installing Splunk alone is not enough to parse Windows and Sysmon events into usable fields. The **Splunk Add-on for Sysmon** provides the field extractions and CIM mappings for Sysmon event IDs, while the **Splunk Add-on for Microsoft Windows** does the same for native Windows Event Log sources (Security, System, Application, etc.). Without both, events land as raw XML and key fields like `CommandLine`, `Image`, and `User` will not extract correctly.
+ 
+#### Splunkbase Login vs. Instance Login
+There are two separate credential sets in play here. The Splunk account created at splunk.com is used to log into Splunkbase and authorize the download of add-ons. The admin credentials created during installation are used to log into the local Splunk instance at `localhost:8000`. These are independent — using the wrong set at either step will produce an access error.
+ 
+#### Remote Event Log Collections Use WMI
+The Remote Event Log Collections input type collects Windows Event Logs via WMI (Windows Management Instrumentation). This requires a domain account with appropriate permissions when collecting from remote hosts. In this lab, the localhost collection is used first to verify the pipeline before extending collection to additional machines on the ECorp LAN.
+ 
+#### Verifying with a Known Command
+Running `ipconfig` from the command line and then searching for it in Splunk is a simple but effective end-to-end test. Sysmon logs process creation events (Event ID 1), so executing any command-line tool generates a telemetry event that should appear in Splunk within seconds. Finding that event confirms that Sysmon is running, the event log collection input is enabled, and Splunk is parsing the data correctly.
 
 ### Screenshots
 > <img width="1439" height="1285" alt="image" src="https://github.com/user-attachments/assets/65141821-e9e7-4442-aa52-054447b7168d" /> [Fig 1 - Splunk Enterprise]
@@ -633,6 +647,16 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 > <img width="1440" height="1342" alt="image" src="https://github.com/user-attachments/assets/8e49c5ea-a4ee-4110-8b79-b6535c47a060" /> [Fig 12 - Splunk Add-on Install]
 > <img width="1440" height="805" alt="image" src="https://github.com/user-attachments/assets/9a060af4-a489-4a53-a5b4-b5f4687b95f3" /> [Fig 13 - Succesful Installation]
 > <img width="1433" height="808" alt="image" src="https://github.com/user-attachments/assets/a8f15be8-1470-400f-9b88-f4dce32220a3" /> [Fig 14 - Additional Splunk Add-on]
+<img width="1434" height="823" alt="image" src="https://github.com/user-attachments/assets/1799c3a6-a308-46bc-b7e1-d6c9c8cfb415" /> [Fig 15 - Data inputs]
+> <img width="1433" height="721" alt="image" src="https://github.com/user-attachments/assets/c611a9df-9f1c-49c5-a200-6a0282eec8c4" /> [Fig 16 - Remote event log collections]
+> <img width="1437" height="640" alt="image" src="https://github.com/user-attachments/assets/058e00b4-4cf0-47ff-b1be-f493bc69f73b" /> [Fig 17 - Enable event collection]
+> <img width="1110" height="612" alt="image" src="https://github.com/user-attachments/assets/aa823af6-efba-4a8f-9dbc-0a39bb22e61b" /> [Fig 18 - Test Collection]
+> <img width="1427" height="1092" alt="image" src="https://github.com/user-attachments/assets/ff00ffe6-cbc4-4f7f-a225-bbf7535b4959" /> [Fig 19 - Log Collection]
+
+
+
+
+
 
 
 
