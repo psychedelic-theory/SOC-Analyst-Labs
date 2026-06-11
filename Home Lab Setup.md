@@ -20,10 +20,10 @@ The completed environemtn will simulate the kind of network an analyst would mon
 | [Manage Users, Groups & Policies](#mugp) | Complete |
 | [Domain Joining](#domainj) | Complete |
 | [Install Sysmon](#sysmon) | Complete |
-| [Install & Configure Splunk](#splunk) | In Progress |
+| [Install & Configure Splunk](#splunk) | Complete |
 
 ## Lab Network Diagram
-<img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig 1 - Network Topology]
+<img width="2324" height="1888" alt="image" src="https://github.com/user-attachments/assets/1a2a4d52-8e9f-4a85-af9e-2a0f645e6c50" /> [Fig A - Network Topology]
 
 # <a name="pfsense"></a>Installing & Configuring pfSense Part 1
 
