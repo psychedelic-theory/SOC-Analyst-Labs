@@ -626,6 +626,18 @@ This section covers installing Splunk Enterprise on the Windows 11 VM and config
 > <img width="1447" height="748" alt="image" src="https://github.com/user-attachments/assets/c7bce2b5-ff55-4dd6-8d02-87bb68955451" /> [Fig 5 - Instance User Setup]
 > <img width="1438" height="730" alt="image" src="https://github.com/user-attachments/assets/a4015fed-e3aa-4dbb-933e-b65243aebf78" /> [Fig 6 - Install Splunk]
 > <img width="1436" height="746" alt="image" src="https://github.com/user-attachments/assets/643aa139-d4f0-4d88-a2ea-23b2eb56b164" /> [Fig 7 - Launch Splunk]
-> 
+> <img width="1436" height="1008" alt="image" src="https://github.com/user-attachments/assets/8376e362-bf16-4453-abf4-f8f5fce64b88" /> [Fig 8 - Sign Into Splunk Instance]
+> <img width="1435" height="815" alt="image" src="https://github.com/user-attachments/assets/33ccd300-1678-4b30-9a6f-4d19be872e6f" /> [Fig 9 - Splunk Add-on For Sysmon]
+> <img width="1438" height="824" alt="image" src="https://github.com/user-attachments/assets/19499815-6113-4c47-9d49-3e9ffe887293" /> [Fig 10 - Apps > Manage Apps]
+> <img width="1429" height="1186" alt="image" src="https://github.com/user-attachments/assets/7973095d-8b8e-4777-855b-655555a9013b" /> [Fig 11 - Install App From File]
+> <img width="1440" height="1342" alt="image" src="https://github.com/user-attachments/assets/8e49c5ea-a4ee-4110-8b79-b6535c47a060" /> [Fig 12 - Splunk Add-on Install]
+> <img width="1440" height="805" alt="image" src="https://github.com/user-attachments/assets/9a060af4-a489-4a53-a5b4-b5f4687b95f3" /> [Fig 13 - Succesful Installation]
+> <img width="1433" height="808" alt="image" src="https://github.com/user-attachments/assets/a8f15be8-1470-400f-9b88-f4dce32220a3" /> [Fig 14 - Additional Splunk Add-on]
+
+
+
+
+
+
 
 
